@@ -1,0 +1,205 @@
+# ContextOps Framework Manifest
+# Machine-readable description for AI agents and tooling
+
+framework:
+  name: ContextOps
+  full_name: Enterprise AI Context Framework
+  version: 0.1
+  status: draft
+  license: Apache-2.0
+  tagline: ITIL for AI context
+  thesis: >
+    ContextOps is the discipline of building and maintaining shared
+    understanding of context across every link in the corporate
+    ecosystem that touches an AI agent's behavior.
+
+triad:
+  - id: people
+    name: People
+    description: >
+      The entire corporate ecosystem from CEO to delivery engineer.
+      Every stakeholder consumes context. Every link is an adoption gate.
+
+  - id: process
+    name: Process
+    description: >
+      Vocabulary alignment across the chain. When stakeholders describe
+      the AI elephant differently, shared understanding dies.
+
+  - id: context
+    name: Context
+    description: >
+      Policies, runbooks, data dictionaries, role definitions,
+      escalation paths. The fluid that flows between People and
+      through Process.
+
+spine:
+  description: >
+    The continuous operating cycle for AI context governance.
+    Done is not a meaningful state.
+  stages:
+    - id: capture
+      name: Capture
+      description: Extract context from where it currently lives
+      practices: [problem-statement-test, mental-model-calibration, downstream-task-tracing]
+
+    - id: curate
+      name: Curate
+      description: Structure, assign ownership, approve, version
+      practices: [context-inventory-build, tolerance-band-definition]
+
+    - id: supply
+      name: Supply
+      description: Deliver context to agents, manage access, onboard new agents
+      practices: [transition-context-audit]
+
+    - id: renew
+      name: Renew
+      description: Monitor drift, refresh assets, retire obsolete context
+      practices: [drift-monitoring, context-freshness-scoring]
+
+roles:
+  - id: context-architect
+    title: Context Architect
+    level: enterprise
+    stages: [capture, curate, supply, renew]
+    reports_to: [enterprise-architect, chief-data-officer]
+
+  - id: context-owner
+    title: Context Owner
+    level: domain
+    stages: [curate]
+    accountability: Accuracy and currency of domain Context Assets
+
+  - id: context-curator
+    title: Context Curator
+    level: practitioner
+    stages: [capture, curate]
+    entry_role: true
+
+  - id: ai-onboarding-manager
+    title: AI Onboarding Manager
+    level: project
+    stages: [supply]
+    accountability: Every new agent goes live with full context
+
+  - id: agent-operations-lead
+    title: Agent Operations Lead
+    level: operations
+    stages: [supply, renew]
+    accountability: Production health and drift monitoring
+
+maturity_model:
+  levels:
+    - level: 1
+      name: Ad hoc
+      characteristic: AI used; context supplied per-prompt by individuals
+
+    - level: 2
+      name: Repeatable
+      characteristic: Teams maintain shared prompt libraries; no governance
+
+    - level: 3
+      name: Defined
+      characteristic: Context Owners exist per domain; Context Inventory documented
+
+    - level: 4
+      name: Managed
+      characteristic: Continuous Context Operations in place; drift monitored
+
+    - level: 5
+      name: Optimizing
+      characteristic: Framework metrics drive AI investment decisions
+
+  gate_rule: >
+    ContextOps applies at Level 2 and above. Below Level 2, address
+    foundational capability first (shared vocabulary, problem
+    definition, stakeholder alignment).
+
+named_practices:
+  - id: problem-statement-test
+    name: Problem Statement Test
+    stage: capture
+    purpose: Classify use case as wicked vs. tame before designing for it
+
+  - id: mental-model-calibration
+    name: Mental Model Calibration
+    stages: [capture, curate]
+    purpose: Document and gap-analyze stakeholder mental models
+
+  - id: downstream-task-tracing
+    name: Downstream Task Tracing
+    stage: capture
+    purpose: Map what happens to agent output, not just what agent does
+
+  - id: transition-context-audit
+    name: Transition Context Audit
+    stages: [supply, renew]
+    purpose: Gate Build-to-Run handovers to prevent context loss
+
+  - id: workflow-first-migration
+    name: Workflow-First Migration
+    scope: cross-cutting
+    purpose: Migrate workflows with affordances, not tools
+
+stakeholders:
+  - role: CEO
+    primary_concern: Outcome-framing before tool-buying
+
+  - role: CIO
+    primary_concern: Audit-grade evidence that agents operate on approved context
+
+  - role: CDO
+    primary_concern: Reduce context engineering cycle time across pilots
+
+  - role: CFO
+    primary_concern: Avoid Two-Cost-Line condition; predictable AI ROI
+
+  - role: Enterprise Architect
+    primary_concern: Fit with existing ITIL/TOGAF/COBIT estate; no rip-and-replace
+
+  - role: AMS / Operations Lead
+    primary_concern: Continuity through staff turnover; context preservation
+
+  - role: L&D Head
+    primary_concern: Internal career paths for AI context roles; reduce workforce anxiety
+
+mappings:
+  sits_on_top_of:
+    - framework: ITIL 4
+      domain: Service Management
+
+    - framework: TOGAF 10
+      domain: Enterprise Architecture
+
+    - framework: COBIT 2019
+      domain: IT Governance
+
+    - framework: NIST AI RMF 1.0
+      domain: AI Risk Management
+
+assessment_instruments:
+  - id: two-cost-line-diagnostic
+    description: Three-question check for tool-for-tool migration failure
+
+  - id: maturity-self-assessment
+    description: Ten-question scored mapping to Levels 1-5
+    location: agent-instructions/README.md
+
+  - id: shared-metrics
+    metrics:
+      - pilot-to-production-conversion-rate
+      - context-freshness-score
+      - two-cost-line-ratio
+
+resources:
+  framework_document: FRAMEWORK.md
+  agent_instructions: agent-instructions/README.md
+  technical_layer_mappings: mappings/technical-layer/README.md
+  license: LICENSE
+
+ethic: Leave no future operator cursing your name.
+
+contact:
+  repository: github.com/[to-be-published]/contextops
+  issues: github.com/[to-be-published]/contextops/issues

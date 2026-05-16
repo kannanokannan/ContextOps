@@ -1,0 +1,5 @@
+﻿# Ignore local OS and editor files
+.vscode/
+__pycache__/
+*.log
+.DS_Store
