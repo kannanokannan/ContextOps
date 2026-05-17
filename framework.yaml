@@ -46,17 +46,19 @@ spine:
     - id: curate
       name: Curate
       description: Structure, assign ownership, approve, version
-      practices: [context-inventory-build, tolerance-band-definition]
+      practices: [mental-model-calibration, context-conflict-resolution]
 
     - id: supply
       name: Supply
       description: Deliver context to agents, manage access, onboard new agents
-      practices: [transition-context-audit]
+      practices: [transition-context-audit, ai-amplifier-assessment]
 
     - id: renew
       name: Renew
       description: Monitor drift, refresh assets, retire obsolete context
-      practices: [drift-monitoring, context-freshness-scoring]
+      practices: [transition-context-audit, context-freshness-scoring, non-deterministic-triage-protocol]
+
+  cross_cutting_practices: [workflow-first-migration, scale-parity-check]
 
 roles:
   - id: context-architect
@@ -142,6 +144,31 @@ named_practices:
     scope: cross-cutting
     purpose: Migrate workflows with affordances, not tools
 
+  - id: context-freshness-scoring
+    name: Context Freshness Scoring
+    stage: renew
+    purpose: Tag Context Assets with volatility-based freshness budgets and surface expired assets to operators
+
+  - id: ai-amplifier-assessment
+    name: AI Amplifier Assessment
+    stage: supply
+    purpose: Assess what an agent will amplify (strengths and dysfunctions) in the consuming workflow before granting production access
+
+  - id: scale-parity-check
+    name: Scale Parity Check
+    scope: cross-cutting
+    purpose: Verify behavior parity at production shape before promotion or regional extension
+
+  - id: context-conflict-resolution
+    name: Context Conflict Resolution
+    stage: curate
+    purpose: Name the canonical source per Context Asset and define precedence order when systems disagree
+
+  - id: non-deterministic-triage-protocol
+    name: Non-Deterministic Triage Protocol
+    stage: renew
+    purpose: Operating pattern for incidents in probabilistic systems that classifies variance rather than dismissing it
+
 stakeholders:
   - role: CEO
     primary_concern: Outcome-framing before tool-buying
@@ -194,6 +221,7 @@ assessment_instruments:
 
 resources:
   framework_document: FRAMEWORK.md
+  document_map: DOCUMENT_MAP.md
   agent_instructions: agent-instructions/README.md
   technical_layer_mappings: mappings/technical-layer/README.md
   license: LICENSE

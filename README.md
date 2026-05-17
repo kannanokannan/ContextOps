@@ -22,6 +22,8 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 2. **Run a self-assessment** — Point any AI agent (Claude, ChatGPT, Gemini, Copilot) at [`agent-instructions/README.md`](agent-instructions/README.md) and the agent will walk you through it.
 3. **Connect your existing AI stack** — See [`mappings/technical-layer/`](mappings/technical-layer/) for how ContextOps connects to technical frameworks like ACE, LangMem, and MemGPT.
 
+Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's guide by role and goal.
+
 ---
 
 ## Repository Structure
@@ -29,6 +31,7 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 ```
 /contextops
 ├── README.md                          ← You are here
+├── DOCUMENT_MAP.md                    ← Reader's guide by role and goal
 ├── FRAMEWORK.md                       ← The framework (10 min read)
 ├── LICENSE                            ← Apache 2.0
 ├── framework.yaml                     ← Machine-readable manifest
@@ -49,7 +52,7 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 
 **v0.1** — Draft. Published for feedback, not yet certified or finalized.
 
-Some sections are stubbed pending field validation. See `FRAMEWORK.md` for the current state.
+Ten named practices documented across the full Spine (Capture → Curate → Supply → Renew). Some sections remain stubbed pending field validation. See `FRAMEWORK.md` for the current state.
 
 ---
 

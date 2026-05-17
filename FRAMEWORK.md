@@ -76,11 +76,11 @@ The ContextOps operating cycle runs in four stages. Each stage is a practice are
 
 **Capture** — Extract context from the places where it currently lives: expert heads, legacy documentation, system configurations, process maps. Key activities include confirming the nature of the problem before designing for it (wicked vs. tame), mapping what happens to the agent's output downstream, and calibrating the mental models stakeholders hold before design begins.
 
-**Curate** — Structure, assign ownership, approve, and version Context Assets. Raw knowledge becomes governable context here. Key activities include building the Context Inventory, assigning Context Owners per domain, and defining tolerance bands — standards define guardrails, not exact shapes, because 50% of any system reflects the builder's judgment even with standards in place.
+**Curate** — Structure, assign ownership, approve, and version Context Assets. Raw knowledge becomes governable context here. Key activities include building the Context Inventory, assigning Context Owners per domain, reconciling contradictory sources before agents consume them, and defining tolerance bands — standards define guardrails, not exact shapes, because 50% of any system reflects the builder's judgment even with standards in place.
 
-**Supply** — Deliver context to agents via MCP and APIs, manage access permissions, and onboard new agents with complete context packages. The critical gate is the Transition Context Audit: before any Build-to-Run handover, the receiving operations team must verify inventory completeness, ownership transfer, renewal triggers, and escalation path preservation.
+**Supply** — Deliver context to agents via MCP and APIs, manage access permissions, and onboard new agents with complete context packages. Two critical gates apply: the Transition Context Audit before any Build-to-Run handover, and the AI Amplifier Assessment before any agent gains production access — to verify the consuming workflow is ready to be amplified.
 
-**Renew** — Monitor context drift, refresh aging assets, retire obsolete context, and trigger re-Capture when organizational reality changes. This stage is what separates ContextOps from a one-time documentation project.
+**Renew** — Monitor context drift, refresh aging assets, retire obsolete context, and trigger re-Capture when organizational reality changes. This stage is what separates ContextOps from a one-time documentation project. Three practices anchor it: Freshness Scoring (proactive aging signals), Transition Context Audit (handover gate), and Non-Deterministic Triage (operating pattern for incidents in probabilistic systems).
 
 ---
 
@@ -116,7 +116,7 @@ Five levels. Used as a gate, not a ladder. Organizations below Level 2 should ad
 
 ## Named Practices
 
-> 🚧 Five practices documented below. Three to five additional practices will be added in v0.2.
+Ten practices, each gated to Maturity Level 2 and above, each mapped to a Spine stage, each overlaying existing enterprise stacks rather than mandating new tooling.
 
 **1. Problem Statement Test** *(Capture)*
 Before any context design begins, classify the use case: tame problem (clear inputs, clear outputs, repeatable) or wicked problem (requirements change as you work, stakeholders disagree on success, no test for done). Almost every AI initiative is the second type, planned as if it were the first. Explicit classification changes the engagement model. Applying PMBOK-style planning to a wicked problem produces paperwork, not progress.
@@ -133,7 +133,30 @@ Before any Build-to-Run handover, the receiving operations team verifies: (a) co
 **5. Workflow-First Migration** *(Cross-cutting)*
 When ContextOps is deployed in a tool-replacement context, the unit of migration must be the workflow with its affordances — not the tool. Tool-for-tool replacement fails because users' workflows are built around the old tool's specific capabilities. Replacing a legacy collaboration platform with a modern suite by mapping features rather than workflows fails not because of the tools but because the workflow affordances were never mapped or preserved. The Two-Cost-Line Diagnostic is the detection mechanism.
 
-> 🚧 **STUB — Practices 6–10:** Likely candidates include Context Freshness Scoring, Agent Blast Radius Assessment, Scale Parity Check, Context Conflict Resolution, and Non-Deterministic Triage Protocol.
+**6. Context Freshness Scoring** *(Renew)*
+Every Context Asset is tagged with a freshness budget set by its Context Owner — the maximum age before re-verification is required. Budgets vary by volatility: pricing changes weekly, org structure shifts monthly, cultural norms move yearly. Assets past their budget are flagged in the Context Inventory, and agents consuming expired assets are surfaced as operating at risk. Re-verification means a named human confirmed the asset is current, not that a sync job ran. Stale context surfaces in agent systems as confident wrong output — fluent, plausible, and indistinguishable from truth until a human catches it. Freshness Scoring is what gives Context Assets the same operational visibility as production infrastructure. An asset without a freshness signal is an asset without monitoring.
+
+**7. AI Amplifier Assessment** *(Supply)*
+Before granting an agent production access to a Context Asset, assess what the agent will amplify in the consuming workflow. AI does not introduce new capabilities — it amplifies existing ones. An agent deployed into a well-run team accelerates a well-run team. The same agent deployed into a team with weak reviews, inconsistent standards, or unstated rule-bending accelerates each of those instead, and the agent cannot tell the difference. The assessment maps the agent's reach, inventories the strengths and dysfunctions it will compound, and scores the asymmetry. Where dysfunction amplification outweighs strength amplification, the deployment context is not ready — the remediation is to fix the underlying dysfunction, not to wrap the agent in additional guardrails.
+
+**8. Scale Parity Check** *(Cross-cutting)*
+Before promoting any Context Asset or agent from pilot to production — or before extending across regions or business units — verify behavior parity at production shape. Pilot success guarantees nothing about production behavior. Data volume, user population breadth, latency profile, regional regulation, and language all change retrieval behavior in ways invisible in pilot. The check defines a parity baseline as input/output pairs from pilot, runs the same set under production conditions, and classifies each divergence as acceptable variance, scope restriction needed, or asset remediation needed. Documented parity exceptions signed by the Context Owner are acceptable. Silent acceptance of unexplained divergence in production is not.
+
+**9. Context Conflict Resolution** *(Curate)*
+For each Context Asset, name the canonical source — a single system of record or a single Context Owner — and define the precedence order when other sources disagree. Enterprises run on multiple systems of record that do not agree: pricing in the ERP and pricing in the CRM differ by a day, org structure in HR and the team directory differ after every move, policy in the wiki and policy in the legal repo show conflicting recent edits. Agents have no native conflict detection; they consume whichever source retrieval surfaces first and apply it with confidence. The result is non-deterministic output that looks like a model problem and is, on inspection, a data problem. Where reconciliation is genuinely impossible, the asset declares itself ambiguous and the agent surfaces the ambiguity rather than resolving it silently. Silent resolution of ambiguous context is the worst available outcome.
+
+**10. Non-Deterministic Triage Protocol** *(Renew)*
+Standard ITIL incident management assumes determinism: same input produces same output, failures reproduce, root causes are findable. AI agents break this assumption. The protocol classifies each variance into one of four categories — wrong like a human would be (content failure, fix the Context Asset), wrong in a way no human would be (alignment failure, fix the agent's instructions), variant within acceptable bounds (log and continue), or genuinely non-deterministic for the same input. Only the fourth category requires the new workflow: characterize the output distribution, identify the contributing Context Assets, and apply Context Conflict Resolution or Freshness Scoring as the first remediation. A separate Non-Deterministic Incident Register runs alongside the standard ITSM database — the standard schema mis-handles incidents that cannot be reproduced. The failure mode this protocol prevents is operations teams closing every unexplained agent behavior as "model variance" without classification. Variance must be classified, not dismissed.
+
+### Spine coverage
+
+| Spine stage | Practices |
+|-------------|-----------|
+| Capture | Problem Statement Test, Mental Model Calibration, Downstream Task Tracing |
+| Curate | Mental Model Calibration, Context Conflict Resolution |
+| Supply | Transition Context Audit, AI Amplifier Assessment |
+| Renew | Transition Context Audit, Context Freshness Scoring, Non-Deterministic Triage Protocol |
+| Cross-cutting | Workflow-First Migration, Scale Parity Check |
 
 ---
 
