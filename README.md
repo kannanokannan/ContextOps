@@ -2,7 +2,7 @@
 
 **Enterprise AI Context Framework. ITIL for AI context.**
 
-A vendor-neutral, open-source methodology for capturing, structuring, governing, and supplying organizational context to AI agents.
+A vendor-neutral, open-source AI governance methodology for capturing, structuring, governing, and supplying organizational context to AI agents. Built for practitioners doing context engineering for the enterprise — not for individual prompt optimization.
 
 ---
 
@@ -20,7 +20,7 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 
 1. **Read** [`FRAMEWORK.md`](FRAMEWORK.md) — the framework in ~10 minutes.
 2. **Run a self-assessment** — Point any AI agent (Claude, ChatGPT, Gemini, Copilot) at [`agent-instructions/README.md`](agent-instructions/README.md) and the agent will walk you through it.
-3. **Connect your existing AI stack** — See [`mappings/technical-layer/`](mappings/technical-layer/) for how ContextOps connects to technical frameworks like ACE, LangMem, and MemGPT.
+3. **Connect your existing AI stack** — See [`mappings/technical-layer/`](mappings/technical-layer/) for connector documentation.
 
 Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's guide by role and goal.
 
@@ -35,8 +35,12 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
 ├── FRAMEWORK.md                       ← The framework (10 min read)
 ├── LICENSE                            ← Apache 2.0
 ├── framework.yaml                     ← Machine-readable manifest
+├── llms.txt                           ← Agent-readable index (llmstxt.org spec)
 ├── /agent-instructions/
 │   └── README.md                      ← AI agent prompt for self-assessment
+├── /docs/
+│   └── /comparisons/
+│       └── contextops-vs-dora.md      ← ContextOps vs. DORA AI Capabilities Model
 └── /mappings/
     └── /technical-layer/
         ├── README.md                  ← Abstract connector pattern
@@ -45,6 +49,24 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
         ├── langmem.md                 ← LangMem mapping
         └── memgpt.md                  ← MemGPT mapping
 ```
+
+---
+
+## Connectors
+
+ContextOps maps to technical agent memory and context-management frameworks via the [`mappings/technical-layer/`](mappings/technical-layer/) directory.
+
+Current connectors: [ACE](mappings/technical-layer/ace.md) (Agentic Context Engineering), [LangMem](mappings/technical-layer/langmem.md), [MemGPT](mappings/technical-layer/memgpt.md).
+
+To add a connector for a framework not listed, copy [`mappings/technical-layer/TEMPLATE.md`](mappings/technical-layer/TEMPLATE.md) and open a PR.
+
+---
+
+## Compare
+
+| vs. | Summary | Doc |
+|-----|---------|-----|
+| DORA AI Capabilities Model | DORA covers the SDLC vertical; ContextOps covers the enterprise horizontal. Complementary, not competing. | [`docs/comparisons/contextops-vs-dora.md`](docs/comparisons/contextops-vs-dora.md) |
 
 ---
 
