@@ -1,0 +1,29 @@
+# ContextOps
+
+> ContextOps is a vendor-neutral, open-source methodology for enterprise AI context governance. It gives organizations a standardized way to capture, structure, govern, and supply organizational context to AI agents. The framework sits on top of ITIL 4, TOGAF 10, COBIT 2019, and NIST AI RMF 1.0 — it does not replace them. Tagline: ITIL for AI context.
+
+## What ContextOps is
+
+ContextOps defines the discipline of building and maintaining shared understanding of context across every link in the corporate ecosystem that touches an AI agent's behavior.
+
+The framework operates on a four-stage cycle called the Spine: Capture → Curate → Supply → Renew. It defines five practitioner roles, a five-level maturity model gated at Level 2, and ten named practices mapped to Spine stages.
+
+Context — policies, runbooks, data dictionaries, role definitions, escalation paths — is the primary bottleneck in enterprise AI adoption. The models are capable. The methodology for governing context at organizational scale does not yet exist in a standardized form. ContextOps fills that gap.
+
+The framework is framework-neutral by design: no tooling is mandated, and it overlays existing enterprise stacks (ITIL, TOGAF, COBIT) rather than replacing them.
+
+## Key files to read
+
+- [FRAMEWORK.md](FRAMEWORK.md): The full framework. ~10 minutes. Read this first. Covers vocabulary, the Spine, five roles, maturity model, ten named practices, stakeholder narratives, and assessment instruments.
+- [framework.yaml](framework.yaml): Machine-readable manifest. All practices, roles, Spine stages, maturity levels, and stakeholders in structured YAML. Start here if you are building tooling.
+- [agent-instructions/README.md](agent-instructions/README.md): Prompt for running a maturity self-assessment against any organization. Load this to conduct an assessment.
+- [mappings/technical-layer/README.md](mappings/technical-layer/README.md): How ContextOps connects to technical agent memory and context-management frameworks (ACE, LangMem, MemGPT). Explains the three operational seams.
+- [DOCUMENT_MAP.md](DOCUMENT_MAP.md): Reader navigation by role and goal. Use this to route a specific stakeholder to the right section.
+
+## How an agent self-bootstraps an org assessment
+
+1. Read `framework.yaml` to load the structured model: Spine stages, named practices, maturity levels, roles, and stakeholder concerns.
+2. Read `FRAMEWORK.md` — focus on: Maturity Model, Named Practices, and Stakeholder Narratives.
+3. Load `agent-instructions/README.md`. It contains the self-assessment prompt. Follow it directly.
+4. The assessment produces: a maturity level (1–5), a Two-Cost-Line Diagnostic result, and a ranked list of starting practices for the organization.
+5. Output is a scored snapshot the organization can act on without a human consultant.
