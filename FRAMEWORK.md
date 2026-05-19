@@ -22,7 +22,7 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 
 ## Why Now
 
-88% of enterprise AI agent pilots fail to reach production in 2026. Not because the models are wrong. Because the organizational harness around the agent — the context, governance, and operating model — is broken.
+88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC research and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — 41% trace to unclear success criteria, 33% to insufficient tool or data access, and 26% to drift in evaluation coverage. The organizational harness around the agent — context, governance, and operating model — is the primary structural cause.
 
 Enterprise AI spend is doubling. Budget share flowing to "AI context and data operations" has grown from 10% to 30% in 24 months. The market has moved from buying models to asking: how do we actually run these things?
 

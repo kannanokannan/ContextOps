@@ -8,7 +8,7 @@ A vendor-neutral, open-source AI governance methodology for capturing, structuri
 
 ## What This Is
 
-88% of enterprise AI agent pilots fail to reach production in 2026. Not because the models are wrong. Because the organizational harness around them — context, governance, operating model — is broken.
+88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — they are scoping, governance, and ownership problems. The organizational harness is the primary structural cause.
 
 The tools are capable. The plumbing (MCP, agent frameworks, APIs) is maturing. The methodology layer is missing.
 
@@ -21,6 +21,8 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 1. **Read** [`FRAMEWORK.md`](FRAMEWORK.md) — the framework in ~10 minutes.
 2. **Run a self-assessment** — Point any AI agent (Claude, ChatGPT, Gemini, Copilot) at [`agent-instructions/README.md`](agent-instructions/README.md) and the agent will walk you through it.
 3. **Connect your existing AI stack** — See [`mappings/technical-layer/`](mappings/technical-layer/) for connector documentation.
+
+Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's guide by role and goal.
 
 Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's guide by role and goal.
 
