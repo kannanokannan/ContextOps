@@ -18,11 +18,13 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 
 **North Star:** ITIL for AI context.
 
+ContextOps is not the ITIL Service Knowledge Management System (SKMS) or a CMDB extension. ITIL SKMS manages configuration items and service knowledge for deterministic IT systems — systems where inputs produce predictable outputs and failures reproduce. ContextOps manages runtime context supply for probabilistic AI agents: token windows, prompt construction, context drift across inference calls. These are different problems requiring different disciplines. ContextOps does not replace SKMS; it governs what flows into the agent that SKMS cannot see.
+
 ---
 
 ## Why Now
 
-88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC research and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — 41% trace to unclear success criteria, 33% to insufficient tool or data access, and 26% to drift in evaluation coverage. The organizational harness around the agent — context, governance, and operating model — is the primary structural cause.
+88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC research and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — 41% trace to unclear success criteria, 33% to insufficient tool or data access, and 26% to drift in evaluation coverage. The organizational context, governance, and operating model around the agent are the primary structural cause.
 
 Enterprise AI spend is doubling. Budget share flowing to "AI context and data operations" has grown from 10% to 30% in 24 months. The market has moved from buying models to asking: how do we actually run these things?
 
@@ -54,6 +56,17 @@ Precise vocabulary is itself a deliverable. Buzzword drift — where "agent," "c
 
 **Pilot-to-Production Conversion Rate** — the percentage of AI pilots that reach persistent production deployment within 12 months. The primary health metric for an enterprise AI program.
 
+### Abstract Enterprise Taxonomy
+
+Where context originates determines which Spine stage is responsible for governing it.
+
+| Tier | Examples | ContextOps stage |
+|------|----------|-----------------|
+| System of Record (SoR) | ERP, CRM, HRIS | Capture |
+| Knowledge Corpus | Wikis, runbooks, policy docs | Capture, Curate |
+| Telemetry | Logs, metrics, incident history | Renew |
+| Cognitive Memory | Agent interaction history, user preferences | Curate, Supply |
+
 ---
 
 ## The Triad: People · Process · Context
@@ -76,7 +89,7 @@ The ContextOps operating cycle runs in four stages. Each stage is a practice are
 
 **Capture** — Extract context from the places where it currently lives: expert heads, legacy documentation, system configurations, process maps. Key activities include confirming the nature of the problem before designing for it (wicked vs. tame), mapping what happens to the agent's output downstream, and calibrating the mental models stakeholders hold before design begins.
 
-**Curate** — Structure, assign ownership, approve, and version Context Assets. Raw knowledge becomes governable context here. Key activities include building the Context Inventory, assigning Context Owners per domain, reconciling contradictory sources before agents consume them, and defining tolerance bands — standards define guardrails, not exact shapes, because 50% of any system reflects the builder's judgment even with standards in place.
+**Curate** — Structure, assign ownership, approve, and version Context Assets. Raw knowledge becomes governable context here. Key activities include building the Context Inventory, assigning Context Owners per domain, reconciling contradictory sources before agents consume them, and defining tolerance bands — standards define guardrails, not exact shapes, because 50% of any system reflects the builder's judgment even with standards in place. Token optimization — selecting and compressing the highest-signal context before it reaches the agent's context window — is the primary technical discipline of this stage.
 
 **Supply** — Deliver context to agents via MCP and APIs, manage access permissions, and onboard new agents with complete context packages. Two critical gates apply: the Transition Context Audit before any Build-to-Run handover, and the AI Amplifier Assessment before any agent gains production access — to verify the consuming workflow is ready to be amplified.
 
@@ -146,7 +159,7 @@ Before promoting any Context Asset or agent from pilot to production — or befo
 For each Context Asset, name the canonical source — a single system of record or a single Context Owner — and define the precedence order when other sources disagree. Enterprises run on multiple systems of record that do not agree: pricing in the ERP and pricing in the CRM differ by a day, org structure in HR and the team directory differ after every move, policy in the wiki and policy in the legal repo show conflicting recent edits. Agents have no native conflict detection; they consume whichever source retrieval surfaces first and apply it with confidence. The result is non-deterministic output that looks like a model problem and is, on inspection, a data problem. Where reconciliation is genuinely impossible, the asset declares itself ambiguous and the agent surfaces the ambiguity rather than resolving it silently. Silent resolution of ambiguous context is the worst available outcome.
 
 **10. Non-Deterministic Triage Protocol** *(Renew)*
-Standard ITIL incident management assumes determinism: same input produces same output, failures reproduce, root causes are findable. AI agents break this assumption. The protocol classifies each variance into one of four categories — wrong like a human would be (content failure, fix the Context Asset), wrong in a way no human would be (alignment failure, fix the agent's instructions), variant within acceptable bounds (log and continue), or genuinely non-deterministic for the same input. Only the fourth category requires the new workflow: characterize the output distribution, identify the contributing Context Assets, and apply Context Conflict Resolution or Freshness Scoring as the first remediation. A separate Non-Deterministic Incident Register runs alongside the standard ITSM database — the standard schema mis-handles incidents that cannot be reproduced. The failure mode this protocol prevents is operations teams closing every unexplained agent behavior as "model variance" without classification. Variance must be classified, not dismissed.
+Standard ITIL incident management assumes determinism: same input produces same output, failures reproduce, root causes are findable. AI agents break this assumption. The protocol classifies each variance into one of four categories — wrong like a human would be (content failure, fix the Context Asset), wrong in a way no human would be (alignment failure, fix the agent's instructions), variant within acceptable bounds (log and continue), or genuinely non-deterministic for the same input. Only the fourth category requires the new workflow: characterize the output distribution, identify the contributing Context Assets, and apply Context Conflict Resolution or Freshness Scoring as the first remediation. A separate Non-Deterministic Incident Register runs alongside the standard ITSM database — the standard schema mis-handles incidents that cannot be reproduced. The failure mode this protocol prevents is operations teams closing every unexplained agent behavior as "model variance" without classification. Variance must be classified, not dismissed. Independent validation: a sovereign air-gapped enterprise AI architecture (2026) defined an equivalent three-tier escalation model — L1 (infrastructure), L2 (context and parameters), L3 (architecture and data) — and introduced structured error codes (AI_ERR_01: Grounding Failure) as a classification mechanism. The convergence confirms the pattern is not framework-specific.
 
 ### Spine coverage
 
