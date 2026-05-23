@@ -114,6 +114,18 @@ All ten live in **[`FRAMEWORK.md` → Named Practices](FRAMEWORK.md#named-practi
 ├── /docs/
 │   └── /comparisons/
 │       └── contextops-vs-dora.md      ← ContextOps vs. DORA AI Capabilities Model
+├── /distributions/
+│   ├── README.md                  ← Install index — all 10 LLM environments
+│   ├── /claude-code/              ← CLAUDE.md
+│   ├── /chatgpt/                  ← Custom GPT instructions
+│   ├── /gemini/                   ← Gem instructions
+│   ├── /copilot-github/           ← copilot-instructions.md
+│   ├── /copilot-m365/             ← Declarative agent YAML
+│   ├── /cursor/                   ← .cursorrules
+│   ├── /windsurf/                 ← .windsurfrules
+│   ├── /cline/                    ← .clinerules
+│   ├── /aider/                    ← CONVENTIONS.md
+│   └── /generic/                  ← Pasteable system prompt
 └── /mappings/
     └── /technical-layer/
         ├── README.md                  ← Abstract connector pattern
