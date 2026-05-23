@@ -268,6 +268,8 @@ Implement one stage, one practice, one role at a time. The maturity gate exists 
 
 The patterns named in this framework — wicked-problem dynamics, panacea effects, point-vs-platform mistakes, the gap between tool and workflow, vocabulary drift, the new-product factor — are not new. They were documented across enterprise platform adoption waves in the 1980s, 1990s, 2000s, and 2010s, by practitioners, academics, and analysts working in enterprise IT, organizational design, and complexity theory.
 
+The wicked-problem framing originates with Rittel and Webber (1973), who defined wicked problems as those where requirements change as you work, stakeholders disagree on success, and there is no test for done — conditions that describe virtually every enterprise AI initiative. Their work established that applying engineering methods to wicked problems produces documentation, not solutions. ContextOps applies this directly: the Problem Statement Test (Practice 1) exists precisely to catch this misapplication before it costs twelve months of effort.
+
 The contribution of ContextOps is the synthesis of those patterns into a methodology for AI agents specifically — and the insistence that the methodology layer is itself the missing piece of enterprise AI today.
 
 ContextOps sits on top of:
