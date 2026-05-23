@@ -1,14 +1,14 @@
 # ContextOps — Project Status
 
 **Version:** 0.1 (Draft)
-**Last updated:** 2026-05-19
+**Last updated:** 2026-05-23
 **Canonical source:** This file. Do not track status elsewhere.
 
 ---
 
 ## Overall status
 
-In active development. Core framework is documented and published. Instruments and field validation are v0.2 scope.
+In active development. Core framework documented and published. Distribution packs shipped across 10 LLM environments. Field validation is v0.2 scope.
 
 ---
 
@@ -27,41 +27,49 @@ In active development. Core framework is documented and published. Instruments a
 | Technical layer — MemGPT mapping | `mappings/technical-layer/memgpt.md` | ✅ Complete (v0.1) |
 | Technical layer — RAG Pipeline mapping | `mappings/technical-layer/rag-pipeline.md` | ✅ Complete (v0.1) |
 | Comparison — ContextOps vs. DORA | `docs/comparisons/contextops-vs-dora.md` | ✅ Complete (v0.1) |
+| ContextBoundary project status | `contextboundary_status.md` | ✅ Active (concept phase) |
+| Distribution Packs | `distributions/` | ✅ Complete (v0.1) — 10 LLM environments |
 | License | `LICENSE` | ✅ Apache 2.0 |
 
 ---
 
 ## Done
 
-### FRAMEWORK.md edits (v0.1 pass)
+### FRAMEWORK.md edits
 
-- ✅ **1a** — Differentiation paragraph added (ContextOps vs. ITIL SKMS/CMDB). Location: end of "What is ContextOps" section, before "Why Now".
-- ✅ **1b** — "Organizational harness" softened to "organizational context, governance, and operating model". Word "harness" removed from FRAMEWORK.md entirely.
-- ✅ **1c** — Forrester attribution added to 88% pilot failure stat. Full citation: Forrester and Anaconda 2026, corroborated by IDC and MIT Sloan CIO panel. Root-cause breakdown included.
-- ✅ **1d** — Abstract Enterprise Taxonomy table added after Core Vocabulary section. Four tiers: SoR, Knowledge Corpus, Telemetry, Cognitive Memory.
-- ✅ **1e** — Token optimization sentence added to Curate stage description in the Spine section.
-- ✅ **1f** — Convergence citation added to end of Practice 10 (Non-Deterministic Triage Protocol). References sovereign air-gapped architecture (2026) three-tier escalation model and AI_ERR_01 error code.
+- ✅ Differentiation paragraph added (ContextOps vs. ITIL SKMS/CMDB)
+- ✅ "Organizational harness" softened — word "harness" removed entirely
+- ✅ Forrester attribution added to 88% pilot failure stat
+- ✅ Abstract Enterprise Taxonomy table added (SoR / Knowledge Corpus / Telemetry / Cognitive Memory)
+- ✅ Token optimization sentence added to Curate stage
+- ✅ Convergence citation added to Practice 10 (Non-Deterministic Triage Protocol)
+- ✅ Practice 9 tightened — Kautilya Rule of Three applied to canonicalization
+- ✅ Roots section — Rittel & Webber (1973) cited for wicked-problem framing
 
-### framework.yaml updates (v0.1 pass)
+### framework.yaml
 
-- ✅ **2a** — `sits_alongside` key added under `mappings:`. Entries: DORA AI Capabilities Model (SDLC vertical) and DAMA-DMBOK (Data Management).
-- ✅ **2b** — `ai-amplifier-assessment` confirmed as the consistent identifier throughout. No `agent-blast-radius` references present.
+- ✅ `sits_alongside` added: DORA AI Capabilities Model + DAMA-DMBOK
+- ✅ `ai-amplifier-assessment` confirmed as consistent identifier
 
-### New technical-layer mapping
+### New files
 
-- ✅ **3** — `mappings/technical-layer/rag-pipeline.md` created. Covers: what RAG is, Spine mapping table (four pipeline components to four stages), four applicable ContextOps practices, organizational gap analysis, five-step connection pattern, scope note.
+- ✅ `mappings/technical-layer/rag-pipeline.md` — RAG Pipeline connector
+- ✅ `docs/comparisons/contextops-vs-dora.md` — DORA comparison
+- ✅ `contextboundary_status.md` — ContextBoundary sibling project tracking
+- ✅ `distributions/` — 10 LLM-specific install packs (Claude Code, Cursor, Windsurf, Cline, Aider, Copilot GitHub, Copilot M365, ChatGPT, Gemini, Generic)
 
-### README.md
+### Structural fixes
 
-- ✅ **4** — Quick Start step 3 updated to reference RAG pipelines, agent memory frameworks, and orchestration tools without naming specific products. Duplicate "Not sure where to start?" line removed.
+- ✅ `agent-instructions/README.md` — moved from flat file to correct subdirectory
+- ✅ `README.md` — repo tree updated, rag-pipeline added to connectors
+- ✅ `DOCUMENT_MAP.md` — repo tree updated, rag-pipeline added to mappings list
+- ✅ `llms.txt` — LLM-addressed note added
+- ✅ `.gitignore` — `.claude/` added to prevent Claude Code worktree files from being committed
 
-### Discoverability pass (separate PR, merged)
+### Discoverability
 
 - ✅ `llms.txt` created at repo root (llmstxt.org spec)
-- ✅ README.md opener rewritten with natural search-relevant phrases
-- ✅ Connectors section added to README.md (ACE, LangMem, MemGPT)
-- ✅ Compare section added to README.md
-- ✅ `docs/comparisons/contextops-vs-dora.md` created
+- ✅ README.md opener rewritten with search-relevant phrases
 - ✅ GitHub repo topics set: ai-governance, enterprise-ai, context-engineering, ai-operations, mcp, llmops, ai-framework
 
 ---
@@ -75,16 +83,29 @@ Nothing currently in flight.
 ## v0.2 scope (not started)
 
 - Full maturity self-assessment instrument (ten-question scored)
-- Pre-flight culture diagnostic (ten questions, field validation pending)
-- Organizational case sketches (sanitized real-world examples)
-- Additional technical-layer mappings (community contributions)
-- Assessment instrument tooling
+- Pre-flight culture diagnostic (field validation pending)
+- Disconfirming criteria per maturity level
+- Organizational case sketches (sanitized)
+- ContextBoundary rationale write-up + Red/Amber/Green classification criteria
+- Second Gemini Deep Research (2027–2029 predictions angle)
+- Namespace claim — GitHub org, domains (.org/.dev/.io), npm/pypi placeholders
+- Services-firm narrative: net-new billable work ContextOps creates
+
+---
+
+## Traffic signals (as of 2026-05-23)
+
+- 64 clones / 45 unique cloners in 14 days — zero promotion
+- Clone-heavy / view-light pattern = LLM-mediated discovery confirmed
+- `chatgpt.com` appearing as referrer — GPT web tool indexing via Bing
+- `llms.txt` accessed directly — AI-native distribution working
+- Primary metrics going forward: unique clones + llms.txt views (not page views)
 
 ---
 
 ## Sibling project
 
-**ContextBoundary** — sovereignty and compute placement layer. Tracked separately in `contextboundary_status.md`. Do not conflate with ContextOps.
+**ContextBoundary** — sovereignty and compute placement layer. Tracked in `contextboundary_status.md`.
 
 ---
 
