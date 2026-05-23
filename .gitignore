@@ -3,3 +3,6 @@
 __pycache__/
 *.log
 .DS_Store
+
+# Claude Code internal worktree files
+.claude/
