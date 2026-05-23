@@ -64,7 +64,7 @@ Three sections, in order:
 | Connect a memory framework | [`mappings/technical-layer/README.md`](mappings/technical-layer/README.md) |
 | Add a new technical mapping | [`mappings/technical-layer/TEMPLATE.md`](mappings/technical-layer/TEMPLATE.md) |
 
-Existing technical-layer mappings: [ACE](mappings/technical-layer/ace.md), [LangMem](mappings/technical-layer/langmem.md), [MemGPT](mappings/technical-layer/memgpt.md).
+Existing technical-layer mappings: [ACE](mappings/technical-layer/ace.md), [LangMem](mappings/technical-layer/langmem.md), [MemGPT](mappings/technical-layer/memgpt.md), [RAG Pipeline](mappings/technical-layer/rag-pipeline.md).
 
 ---
 
@@ -104,16 +104,24 @@ All ten live in **[`FRAMEWORK.md` → Named Practices](FRAMEWORK.md#named-practi
 ├── DOCUMENT_MAP.md                    ← You are here
 ├── FRAMEWORK.md                       ← The framework (10 min read)
 ├── framework.yaml                     ← Machine-readable manifest
+├── llms.txt                           ← Agent-readable index
 ├── LICENSE                            ← Apache 2.0
+├── CLAUDE.md                          ← Claude Code instructions
+├── contextops_status.md               ← Project status (canonical)
+├── contextboundary_status.md          ← ContextBoundary sibling project status
 ├── /agent-instructions/
 │   └── README.md                      ← AI agent self-assessment prompt
+├── /docs/
+│   └── /comparisons/
+│       └── contextops-vs-dora.md      ← ContextOps vs. DORA AI Capabilities Model
 └── /mappings/
     └── /technical-layer/
         ├── README.md                  ← Abstract connector pattern
         ├── TEMPLATE.md                ← Template for new mappings
         ├── ace.md                     ← Agentic Context Engineering
         ├── langmem.md                 ← LangMem
-        └── memgpt.md                  ← MemGPT
+        ├── memgpt.md                  ← MemGPT
+        └── rag-pipeline.md            ← RAG Pipeline
 ```
 
 ---

@@ -8,7 +8,7 @@ A vendor-neutral, open-source AI governance methodology for capturing, structuri
 
 ## What This Is
 
-88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — they are scoping, governance, and ownership problems. The organizational harness is the primary structural cause.
+88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — they are scoping, governance, and ownership problems. Organizational context, governance, and operating model gaps are the primary structural cause.
 
 The tools are capable. The plumbing (MCP, agent frameworks, APIs) is maturing. The methodology layer is missing.
 
@@ -34,8 +34,11 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
 ├── DOCUMENT_MAP.md                    ← Reader's guide by role and goal
 ├── FRAMEWORK.md                       ← The framework (10 min read)
 ├── LICENSE                            ← Apache 2.0
+├── CLAUDE.md                          ← Claude Code instructions
 ├── framework.yaml                     ← Machine-readable manifest
 ├── llms.txt                           ← Agent-readable index (llmstxt.org spec)
+├── contextops_status.md               ← Project status (canonical)
+├── contextboundary_status.md          ← ContextBoundary sibling project status
 ├── /agent-instructions/
 │   └── README.md                      ← AI agent prompt for self-assessment
 ├── /docs/
@@ -47,7 +50,8 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
         ├── TEMPLATE.md                ← Template for new mappings
         ├── ace.md                     ← Agentic Context Engineering mapping
         ├── langmem.md                 ← LangMem mapping
-        └── memgpt.md                  ← MemGPT mapping
+        ├── memgpt.md                  ← MemGPT mapping
+        └── rag-pipeline.md            ← RAG Pipeline mapping
 ```
 
 ---
@@ -56,7 +60,7 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
 
 ContextOps maps to technical agent memory and context-management frameworks via the [`mappings/technical-layer/`](mappings/technical-layer/) directory.
 
-Current connectors: [ACE](mappings/technical-layer/ace.md) (Agentic Context Engineering), [LangMem](mappings/technical-layer/langmem.md), [MemGPT](mappings/technical-layer/memgpt.md).
+Current connectors: [ACE](mappings/technical-layer/ace.md) (Agentic Context Engineering), [LangMem](mappings/technical-layer/langmem.md), [MemGPT](mappings/technical-layer/memgpt.md), [RAG Pipeline](mappings/technical-layer/rag-pipeline.md).
 
 To add a connector for a framework not listed, copy [`mappings/technical-layer/TEMPLATE.md`](mappings/technical-layer/TEMPLATE.md) and open a PR.
 
