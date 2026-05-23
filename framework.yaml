@@ -192,6 +192,21 @@ stakeholders:
     primary_concern: Internal career paths for AI context roles; reduce workforce anxiety
 
 mappings:
+  sits_alongside:
+    - framework: DORA AI Capabilities Model
+      domain: Software Delivery (SDLC vertical)
+      url: https://dora.dev/dora-aicmr
+      note: >
+        DORA covers 7 AI capabilities including context engineering within
+        the software delivery lifecycle. ContextOps is enterprise-horizontal;
+        DORA is SDLC-vertical. Complementary, not equivalent.
+
+    - framework: DAMA-DMBOK
+      domain: Data Management
+      note: >
+        Adjacent discipline. Data management governance underpins context
+        asset quality. ContextOps does not replace DAMA-DMBOK.
+
   sits_on_top_of:
     - framework: ITIL 4
       domain: Service Management
