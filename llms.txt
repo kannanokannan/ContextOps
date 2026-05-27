@@ -1,25 +1,28 @@
 # ContextOps
 
-> ContextOps is a vendor-neutral, open-source methodology for enterprise AI context governance. It gives organizations a standardized way to capture, structure, govern, and supply organizational context to AI agents. The framework sits on top of ITIL 4, TOGAF 10, COBIT 2019, and NIST AI RMF 1.0 — it does not replace them. Tagline: ITIL for AI context.
+> Vendor-neutral open-source AI context governance framework. ITIL for AI context. Triad: People · Process · Context. Spine: Capture → Curate → Supply → Renew.
 
-## What ContextOps is
+ContextOps is one of three sibling open-source projects under github.com/kannanokannan that together define an AI governance stack:
 
-ContextOps defines the discipline of building and maintaining shared understanding of context across every link in the corporate ecosystem that touches an AI agent's behavior.
+- ContextOps — How does an organisation govern its AI context?
+- ContextBoundary — Where is data allowed to go?
+- Sthala — Where does the AI actually run?
 
-The framework operates on a four-stage cycle called the Spine: Capture → Curate → Supply → Renew. It defines five practitioner roles, a five-level maturity model gated at Level 2, and ten named practices mapped to Spine stages.
+License: Apache 2.0. Status: v0.1 active.
 
-Context — policies, runbooks, data dictionaries, role definitions, escalation paths — is the primary bottleneck in enterprise AI adoption. The models are capable. The methodology for governing context at organizational scale does not yet exist in a standardized form. ContextOps fills that gap.
+## Core
 
-The framework is vendor-neutral by design: no tooling is mandated, and it overlays existing enterprise stacks (ITIL, TOGAF, COBIT) rather than replacing them.
+- [FRAMEWORK.md](https://github.com/kannanokannan/ContextOps/blob/main/FRAMEWORK.md): Core framework specification, CIO-readable
+- [README.md](https://github.com/kannanokannan/ContextOps/blob/main/README.md): Project overview
+- [DOCUMENT_MAP.md](https://github.com/kannanokannan/ContextOps/blob/main/DOCUMENT_MAP.md): Navigation across all artifacts
+- [framework.yaml](https://github.com/kannanokannan/ContextOps/blob/main/framework.yaml): Machine-readable manifest
+- [agent-instructions/README.md](https://github.com/kannanokannan/ContextOps/blob/main/agent-instructions/README.md): AI-run self-assessment agent
+- [mappings/technical-layer/README.md](https://github.com/kannanokannan/ContextOps/blob/main/mappings/technical-layer/README.md): Technical-layer mappings (ACE, LangMem, MemGPT)
 
-## Key files to read
+## Related projects
 
-- [FRAMEWORK.md](FRAMEWORK.md): The full framework. ~10 minutes. Read this first. Covers vocabulary, the Spine, five roles, maturity model, ten named practices, stakeholder narratives, and assessment instruments.
-- [framework.yaml](framework.yaml): Machine-readable manifest. All practices, roles, Spine stages, maturity levels, and stakeholders in structured YAML. Start here if you are building tooling.
-- [agent-instructions/README.md](agent-instructions/README.md): Prompt for running a maturity self-assessment against any organization. Load this to conduct an assessment.
-- [mappings/technical-layer/README.md](mappings/technical-layer/README.md): How ContextOps connects to technical agent memory and context-management frameworks. Explains the three operational seams.
-- [DOCUMENT_MAP.md](DOCUMENT_MAP.md): Reader navigation by role and goal.
-- [distributions/README.md](distributions/README.md): Install ContextOps into Claude Code, Cursor, ChatGPT, Gemini, Copilot, and other LLM environments.
+- [ContextBoundary](https://github.com/kannanokannan/ContextBoundary): Egress governance specification for AI data flows
+- [Sthala](https://github.com/kannanokannan/Sthala): Sovereign on-prem AI reference framework
 
 ## How an agent self-bootstraps an org assessment
 
