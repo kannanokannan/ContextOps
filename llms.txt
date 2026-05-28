@@ -21,6 +21,7 @@ License: Apache 2.0. Status: v0.1 active.
 
 ## Related projects
 
+- [context-stack](https://github.com/kannanokannan/context-stack): Canonical terminology, locked decisions, and family framing for all three projects
 - [ContextBoundary](https://github.com/kannanokannan/ContextBoundary): Egress governance specification for AI data flows
 - [Sthala](https://github.com/kannanokannan/Sthala): Sovereign on-prem AI reference framework
 

@@ -109,3 +109,17 @@ Apache 2.0. Enterprises can use, modify, and build commercial offerings on top o
 ---
 
 *ContextOps is the discipline of building and maintaining shared understanding of context across every link in the corporate ecosystem that touches an AI agent's behavior.*
+
+---
+
+## Part of the Stack
+
+This project is one of three sibling open-source projects under [github.com/kannanokannan](https://github.com/kannanokannan).
+
+| Project | Question | Repo |
+|---------|----------|------|
+| ContextOps | How does an org govern its AI context? | [github.com/kannanokannan/ContextOps](https://github.com/kannanokannan/ContextOps) |
+| ContextBoundary | Where is data allowed to go? | [github.com/kannanokannan/ContextBoundary](https://github.com/kannanokannan/ContextBoundary) |
+| Sthala | Where does the AI actually run? | [github.com/kannanokannan/Sthala](https://github.com/kannanokannan/Sthala) |
+
+Canonical terminology and cross-project decisions: [context-stack](https://github.com/kannanokannan/context-stack)
