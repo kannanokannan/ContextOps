@@ -6,6 +6,14 @@ ContextOps is the governance layer that fixes this. A vendor-neutral, open-sourc
 
 **ITIL for AI context. Apache 2.0.**
 
+## The Problem
+
+Modern AI systems let interpretation, decision-making, and execution share one trust boundary. That lets probabilistic systems directly own deterministic consequences — the root cause of prompt injection, unsafe automation, context contamination, and authority confusion.
+
+This project is part of the context-stack, which separates interpretation from authority: intelligence proposes, governance validates, execution authorizes. Intelligence can suggest anything. Authority stays deterministic.
+
+Full doctrine: https://github.com/kannanokannan/context-stack
+
 ---
 
 88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — they are scoping, governance, and ownership problems. Organizational context, governance, and operating model gaps are the primary structural cause.
