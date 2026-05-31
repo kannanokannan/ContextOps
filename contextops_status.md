@@ -38,7 +38,7 @@ In active development. Core framework documented and published. Distribution pac
 ### FRAMEWORK.md edits
 
 - ✅ Differentiation paragraph added (ContextOps vs. ITIL SKMS/CMDB)
-- ✅ "Organizational harness" softened — word "harness" removed entirely
+- ✅ Production-readiness wording softened — organizational context, governance, and operating model named explicitly
 - ✅ Forrester attribution added to 88% pilot failure stat
 - ✅ Abstract Enterprise Taxonomy table added (SoR / Knowledge Corpus / Telemetry / Cognitive Memory)
 - ✅ Token optimization sentence added to Curate stage
