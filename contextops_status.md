@@ -1,7 +1,7 @@
 # ContextOps — Project Status
 
 **Version:** 0.1 (Draft)
-**Last updated:** 2026-05-23
+**Last updated:** 2026-06-01
 **Canonical source:** This file. Do not track status elsewhere.
 
 ---
@@ -80,6 +80,23 @@ Nothing currently in flight.
 
 ---
 
+## Framework critique action items (2026-06-01)
+
+These are not defects in v0.1. They are the next editorial and structural improvements to keep the framework credible as traffic increases.
+
+| Priority | Action item | Why it matters | Target artifact |
+|----------|-------------|----------------|-----------------|
+| P0 | Align stack positioning across ContextOps, context-stack, and the public landing page | Readers should understand whether ContextOps is a standalone framework, one layer in the AI governance stack, or both | `README.md`, `FRAMEWORK.md`, `llms.txt`, site copy |
+| P0 | Strengthen the Curate stage without adding an 11th practice | Curate is the weakest stage relative to Capture, Supply, and Renew; the framework needs clearer outputs for governed Context Assets | `FRAMEWORK.md` |
+| P1 | Thread Continuous Context Operations (CCO) back through the framework | CCO is defined in vocabulary but should also appear in the Spine, AMS / Run overlay, and maturity model | `FRAMEWORK.md`, `framework.yaml` |
+| P1 | Add a Level 1 foundation readiness path | The maturity gate says Level 1 organizations need foundational work first; they need a concrete path, not only a rejection gate | `FRAMEWORK.md`, `agent-instructions/README.md` |
+| P1 | Connect the Abstract Enterprise Taxonomy to Capture and Curate work | The taxonomy is useful but currently isolated; readers need to know how it drives actual context governance | `FRAMEWORK.md` |
+| P2 | Tighten Workflow-First Migration's link to context governance | Practice 5 is valid but should make the Context Asset connection more explicit | `FRAMEWORK.md` |
+| P2 | Review Delivery Model Overlays placement during the next framework organization pass | The section is useful; placement may be better after Named Practices once readers know the practice names | `FRAMEWORK.md` |
+| P2 | Revisit read-time claim and possible document split | FRAMEWORK.md may now read longer than 10 minutes; split only if maintenance cost is justified | `FRAMEWORK.md`, possible `PRACTICES.md` |
+| P2 | Add secondary support for the pilot-failure claim | The 88% stat is useful but should not carry the whole Why Now argument alone | `FRAMEWORK.md`, `README.md` |
+
+---
 ## v0.2 scope (not started)
 
 - Full maturity self-assessment instrument (ten-question scored)
