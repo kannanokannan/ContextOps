@@ -97,6 +97,58 @@ The ContextOps operating cycle runs in four stages. Each stage is a practice are
 
 ---
 
+## Delivery Model Overlays
+
+ContextOps is delivery-model neutral. It does not replace AMS, Waterfall, Agile, Scrum, SAFe, DevOps, PMBOK, or ITIL. It attaches to them as a context governance overlay.
+
+The Spine does not change:
+
+**Capture → Curate → Supply → Renew**
+
+What changes is where the Spine attaches. Each delivery model loses context in a different place.
+
+| Delivery mode | ContextOps problem | Primary attachment points |
+|---------------|-------------------|---------------------------|
+| AMS / Run | Context decays after handover; ownership disappears; operations teams rebuild intent from tickets, runbooks, and system scraps. | Transition Context Audit, Context Freshness Scoring, Non-Deterministic Triage Protocol |
+| Waterfall / Project | Context is frozen too early; requirements documents become stale before go-live. | Context Baseline, Context Delta Review, Transition Context Audit |
+| Agile / Product | Context changes every sprint; decisions live in ceremonies, backlog comments, chats, and people's heads. | Sprint Context Capture, Backlog Context Hygiene, Release Context Audit |
+
+### AMS / Run Overlay
+
+In AMS and run-state operations, the main failure is not initial capture. It is decay after handover.
+
+The project team leaves. The operations team inherits tickets, partial runbooks, access paths, and tribal knowledge in fragments. For AI systems, this failure is sharper because agents continue operating on context whose ownership, freshness, and escalation path may no longer be clear.
+
+ContextOps attaches at the Build-to-Run boundary through the Transition Context Audit. Before operations accepts an AI-enabled service, the audit verifies that Context Assets are complete, Context Owners are named, renewal triggers exist, and escalation paths survive the handover.
+
+Once in run state, Context Freshness Scoring and Non-Deterministic Triage Protocol become the main operating practices. The goal is simple: operations should not have to reconstruct organizational intent from incident history.
+
+### Waterfall / Project Overlay
+
+In Waterfall and phase-gate delivery, context fails because it is treated as fixed too early.
+
+Requirements are baselined, design proceeds, delivery takes months, and organizational reality changes while the documents remain formally correct. By go-live, the system may satisfy the approved requirement while missing the current operating context.
+
+ContextOps does not change phase gates. It adds context gates.
+
+At requirements sign-off, the team creates a Context Baseline: the approved Context Assets, their owners, and their assumptions. Before UAT, a Context Delta Review asks what has changed since baseline. Before go-live, the Transition Context Audit verifies that the receiving team has current context, not just approved documents.
+
+The Waterfall problem is not documentation shortage. It is stale documentation with no renewal mechanism.
+
+### Agile / Product Overlay
+
+In Agile and product delivery, context fails because it moves too quickly.
+
+Sprint planning, backlog refinement, reviews, retrospectives, design discussions, and support conversations all create context. Much of it never becomes a governed asset. It remains in tickets, chats, meetings, and team memory.
+
+ContextOps attaches lightly to the sprint rhythm. Definition of Ready should identify the context source and owner for any AI-relevant work. Definition of Done should include required updates to affected Context Assets. Release readiness should include a Release Context Audit before production promotion.
+
+The Agile problem is not lack of learning. It is that learning remains local unless it is captured, curated, and supplied back into the operating model.
+
+ContextOps preserves delivery-model autonomy. Teams keep their ceremonies, gates, and tools. ContextOps names the context that must survive them.
+
+---
+
 ## Roles
 
 Five roles the framework defines, names, and enables. Each is a viable professional title — something a practitioner would put in their LinkedIn headline.
