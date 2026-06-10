@@ -1,7 +1,7 @@
 # ContextOps — Project Status
 
 **Version:** 0.1 (Draft)
-**Last updated:** 2026-06-01
+**Last updated:** 2026-06-10
 **Canonical source:** This file. Do not track status elsewhere.
 
 ---
@@ -72,6 +72,10 @@ In active development. Core framework documented and published. Distribution pac
 - ✅ README.md opener rewritten with search-relevant phrases
 - ✅ GitHub repo topics set: ai-governance, enterprise-ai, context-engineering, ai-operations, mcp, llmops, ai-framework
 
+### Framework critique follow-ups
+
+- ✅ Stack positioning aligned with context-stack: ContextOps as organizational context governance, ContextBoundary as egress governance, Sthala as runtime reference implementation, and Griha as product layer.
+- ✅ Curate stage strengthened with explicit governed Context Asset outputs: canonical source, owner, validity rule, conflict rule, access boundary, shape constraint, and downstream consumers.
 ---
 
 ## In flight
@@ -80,14 +84,12 @@ Nothing currently in flight.
 
 ---
 
-## Framework critique action items (2026-06-01)
+## Remaining framework critique action items (2026-06-10)
 
-These are not defects in v0.1. They are the next editorial and structural improvements to keep the framework credible as traffic increases.
+These are not defects in v0.1. They are the remaining editorial and structural improvements to keep the framework credible as traffic increases.
 
 | Priority | Action item | Why it matters | Target artifact |
 |----------|-------------|----------------|-----------------|
-| P0 | Align stack positioning across ContextOps, context-stack, and the public landing page | Readers should understand whether ContextOps is a standalone framework, one layer in the AI governance stack, or both | `README.md`, `FRAMEWORK.md`, `llms.txt`, site copy |
-| P0 | Strengthen the Curate stage without adding an 11th practice | Curate is the weakest stage relative to Capture, Supply, and Renew; the framework needs clearer outputs for governed Context Assets | `FRAMEWORK.md` |
 | P1 | Thread Continuous Context Operations (CCO) back through the framework | CCO is defined in vocabulary but should also appear in the Spine, AMS / Run overlay, and maturity model | `FRAMEWORK.md`, `framework.yaml` |
 | P1 | Add a Level 1 foundation readiness path | The maturity gate says Level 1 organizations need foundational work first; they need a concrete path, not only a rejection gate | `FRAMEWORK.md`, `agent-instructions/README.md` |
 | P1 | Connect the Abstract Enterprise Taxonomy to Capture and Curate work | The taxonomy is useful but currently isolated; readers need to know how it drives actual context governance | `FRAMEWORK.md` |
@@ -97,6 +99,7 @@ These are not defects in v0.1. They are the next editorial and structural improv
 | P2 | Add secondary support for the pilot-failure claim | The 88% stat is useful but should not carry the whole Why Now argument alone | `FRAMEWORK.md`, `README.md` |
 
 ---
+
 ## v0.2 scope (not started)
 
 - Full maturity self-assessment instrument (ten-question scored)

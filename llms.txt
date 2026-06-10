@@ -2,11 +2,12 @@
 
 > Vendor-neutral open-source AI context governance framework. ITIL for AI context. Triad: People · Process · Context. Spine: Capture → Curate → Supply → Renew.
 
-ContextOps is one of three sibling open-source projects under github.com/kannanokannan that together define an AI governance stack:
+ContextOps is the organizational context governance layer in the context-stack. The stack has three sibling governance projects plus a product layer:
 
 - ContextOps — How does an organisation govern its AI context?
 - ContextBoundary — Where is data allowed to go?
 - Sthala — Where does the AI actually run?
+- Griha — How do the stack principles appear in a working system?
 
 License: Apache 2.0. Status: v0.1 active.
 
@@ -21,9 +22,10 @@ License: Apache 2.0. Status: v0.1 active.
 
 ## Related projects
 
-- [context-stack](https://github.com/kannanokannan/context-stack): Canonical terminology, locked decisions, and family framing for all three projects
+- [context-stack](https://github.com/kannanokannan/context-stack): Canonical terminology, locked decisions, and family framing for the stack
 - [ContextBoundary](https://github.com/kannanokannan/ContextBoundary): Egress governance specification for AI data flows
 - [Sthala](https://github.com/kannanokannan/Sthala): Sovereign on-prem AI reference framework
+- [Griha](https://github.com/kannanokannan/Griha): Product layer above the three governance projects
 
 ## How an agent self-bootstraps an org assessment
 

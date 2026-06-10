@@ -2,7 +2,7 @@
 
 88% of enterprise AI agent pilots fail to reach production. Not model problems — governance, scoping, and ownership problems. Organisations are deploying probabilistic systems without deterministic governance structures to contain them.
 
-ContextOps is the governance layer that fixes this. A vendor-neutral, open-source methodology for capturing, structuring, and supplying organisational context to AI agents — built for enterprise practitioners, not individual prompt optimisation.
+ContextOps is the organizational context governance layer in the context-stack. It answers one question: how does an org govern the context its AI agents depend on? It is vendor-neutral, open-source, and built for enterprise practitioners — not individual prompt optimization.
 
 **ITIL for AI context. Apache 2.0.**
 
@@ -122,12 +122,13 @@ Apache 2.0. Enterprises can use, modify, and build commercial offerings on top o
 
 ## Part of the Stack
 
-This project is one of three sibling open-source projects under [github.com/kannanokannan](https://github.com/kannanokannan).
+This project is part of the [context-stack](https://github.com/kannanokannan/context-stack), a family of open-source projects under [github.com/kannanokannan](https://github.com/kannanokannan). ContextOps, ContextBoundary, and Sthala are the three governance projects. Griha is the product layer above them.
 
-| Project | Question | Repo |
-|---------|----------|------|
-| ContextOps | How does an org govern its AI context? | [github.com/kannanokannan/ContextOps](https://github.com/kannanokannan/ContextOps) |
-| ContextBoundary | Where is data allowed to go? | [github.com/kannanokannan/ContextBoundary](https://github.com/kannanokannan/ContextBoundary) |
-| Sthala | Where does the AI actually run? | [github.com/kannanokannan/Sthala](https://github.com/kannanokannan/Sthala) |
+| Project | Layer | Question | Repo |
+|---------|-------|----------|------|
+| ContextOps | Organizational context governance | How does an org govern its AI context? | [github.com/kannanokannan/ContextOps](https://github.com/kannanokannan/ContextOps) |
+| ContextBoundary | Egress governance | Where is data allowed to go? | [github.com/kannanokannan/ContextBoundary](https://github.com/kannanokannan/ContextBoundary) |
+| Sthala | Runtime reference implementation | Where does the AI actually run? | [github.com/kannanokannan/Sthala](https://github.com/kannanokannan/Sthala) |
+| Griha | Product layer | How do the stack principles appear in a working system? | [github.com/kannanokannan/Griha](https://github.com/kannanokannan/Griha) |
 
-Canonical terminology and cross-project decisions: [context-stack](https://github.com/kannanokannan/context-stack)
+Canonical terminology and cross-project decisions live in [context-stack](https://github.com/kannanokannan/context-stack).

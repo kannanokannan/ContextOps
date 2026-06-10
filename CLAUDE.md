@@ -31,19 +31,21 @@ Repo: https://github.com/kannanokannan/ContextOps
 
 ## The Framework Family
 
-ContextOps is one of three sibling open-source projects. Do not conflate them.
+ContextOps is one of three sibling governance projects in the context-stack. Griha is the product layer above them. Do not conflate these scopes.
 
-| Project | Answers | Repo |
-|---------|---------|------|
-| **ContextOps** | How does an org govern its AI context? | https://github.com/kannanokannan/ContextOps |
-| **ContextBoundary** | Where is data allowed to go? | https://github.com/kannanokannan/ContextBoundary |
-| **Sthala** | Where does the AI actually run? | https://github.com/kannanokannan/Sthala |
+| Project | Layer | Answers | Repo |
+|---------|-------|---------|------|
+| **ContextOps** | Organizational context governance | How does an org govern its AI context? | https://github.com/kannanokannan/ContextOps |
+| **ContextBoundary** | Egress governance | Where is data allowed to go? | https://github.com/kannanokannan/ContextBoundary |
+| **Sthala** | Runtime reference implementation | Where does the AI actually run? | https://github.com/kannanokannan/Sthala |
+| **Griha** | Product layer | How do the stack principles appear in a working system? | https://github.com/kannanokannan/Griha |
 
 **Key relationship rules:**
 - ContextOps governs the organisational layer
 - ContextBoundary governs the egress layer (horizontal, deployment-agnostic)
 - Sthala is one compliant vertical implementation under ContextBoundary
-- Do not conflate these three scopes
+- Griha is the product layer above the three governance projects
+- Do not conflate these scopes
 
 ---
 

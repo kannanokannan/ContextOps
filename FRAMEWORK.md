@@ -12,6 +12,8 @@
 
 ContextOps is a vendor-neutral, open-source methodology for enterprise AI context governance. It gives organizations a standardized way to capture, structure, govern, and supply organizational context to AI agents.
 
+Within the wider context-stack, ContextOps is the organizational context governance layer. It answers one question: how does an organization govern the context its AI agents depend on? ContextBoundary governs where that context is allowed to flow. Sthala defines one compliant runtime shape. Griha is the product layer above the three governance projects.
+
 Context — the policies, runbooks, data dictionaries, role definitions, and escalation paths an agent needs to operate sensibly — is the primary bottleneck in enterprise AI adoption. The tools are capable. The plumbing (MCP, agent frameworks, APIs) is maturing. The methodology layer is missing.
 
 ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF. It does not replace them.
@@ -90,6 +92,20 @@ The ContextOps operating cycle runs in four stages. Each stage is a practice are
 **Capture** — Extract context from the places where it currently lives: expert heads, legacy documentation, system configurations, process maps. Key activities include confirming the nature of the problem before designing for it (wicked vs. tame), mapping what happens to the agent's output downstream, and calibrating the mental models stakeholders hold before design begins.
 
 **Curate** — Structure, assign ownership, approve, and version Context Assets. Raw knowledge becomes governable context here. Key activities include building the Context Inventory, assigning Context Owners per domain, reconciling contradictory sources before agents consume them, and defining tolerance bands — standards define guardrails, not exact shapes, because 50% of any system reflects the builder's judgment even with standards in place. Token optimization — selecting and compressing the highest-signal context before it reaches the agent's context window — is the primary technical discipline of this stage.
+
+A raw item does not become a Context Asset merely because it is stored. In Curate, each asset must declare the minimum governance fields that make it safe to supply:
+
+| Curate output | Question answered |
+|---------------|-------------------|
+| Canonical source | Where does truth come from? |
+| Context Owner | Who is accountable for accuracy and currency? |
+| Validity rule | When does this asset expire or require re-verification? |
+| Conflict rule | What happens when sources disagree? |
+| Access boundary | Which agents, roles, or workflows may consume it? |
+| Shape constraint | How should it be compressed, chunked, or framed before it reaches an agent? |
+| Downstream consumers | Who or what depends on this context being right? |
+
+The Abstract Enterprise Taxonomy becomes operational in this stage. Systems of Record anchor canonical source decisions. Knowledge Corpus assets require ownership and conflict rules. Telemetry primarily triggers Renew. Cognitive Memory requires the tightest access and shape constraints because it changes through use.
 
 **Supply** — Deliver context to agents via MCP and APIs, manage access permissions, and onboard new agents with complete context packages. Two critical gates apply: the Transition Context Audit before any Build-to-Run handover, and the AI Amplifier Assessment before any agent gains production access — to verify the consuming workflow is ready to be amplified.
 
