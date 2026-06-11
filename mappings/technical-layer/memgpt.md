@@ -56,7 +56,7 @@ A ContextOps-aligned organization integrating MemGPT (or Letta) would:
 
 ## Status
 
-Early adopter. Transitioned from research prototype to the Letta framework. Used by developers for stateful agent deployments, with growing enterprise interest in 2026.
+Early adopter pattern for stateful agent deployments. Evaluate fit against memory governance, auditability, data retention, and Context Owner approval requirements before enterprise use.
 
 ---
 

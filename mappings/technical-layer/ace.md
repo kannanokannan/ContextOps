@@ -56,7 +56,7 @@ A ContextOps-aligned organization integrating ACE would:
 
 ## Status
 
-Early adopter. Demonstrated efficiency gains in research benchmarks (reported +10.6% on agent tasks, 86.9% lower latency). Requires custom integration for enterprise pipelines.
+Early adopter pattern. Requires custom integration for enterprise pipelines and should be evaluated against the organization's own agent tasks, latency profile, governance requirements, and maintenance capacity.
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## Source / Origin
 
-Retrieval-Augmented Generation (RAG) is a hybrid pipeline pattern combining vector retrieval with generative LLM inference. Applied broadly across sovereign and air-gapped enterprise deployments where context cannot be encoded in model weights. No single origin; the pattern is documented across academic literature and production deployments from 2020 onward.
+Retrieval-Augmented Generation (RAG) is a hybrid pipeline pattern combining vector retrieval with generative LLM inference. Applied broadly across sovereign and air-gapped enterprise deployments where context cannot be encoded in model weights. No single origin; the pattern is documented across academic literature and production deployments.
 
 ## Operating Level
 
@@ -64,7 +64,7 @@ ContextOps governs the organizational layer: what context is approved, owned, an
 
 ## Status
 
-Production-ready pattern. RAG pipelines are in enterprise production across regulated industries (finance, healthcare, legal, government) as of 2025. Air-gapped sovereign deployments using RAG are documented across defense and critical infrastructure sectors.
+Production-ready pattern when source ownership, retrieval scope, freshness, and grounding failure handling are governed explicitly. Regulated and sovereign deployments should treat RAG as a delivery mechanism, not a substitute for context governance.
 
 ---
 

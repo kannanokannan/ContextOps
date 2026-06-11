@@ -39,7 +39,7 @@ In active development. Core framework documented and published. Distribution pac
 
 - ✅ Differentiation paragraph added (ContextOps vs. ITIL SKMS/CMDB)
 - ✅ Production-readiness wording softened — organizational context, governance, and operating model named explicitly
-- ✅ Forrester attribution added to 88% pilot failure stat
+- ✅ Time-bound pilot-failure statistics removed; Why Now reframed around durable production-readiness failure modes
 - ✅ Abstract Enterprise Taxonomy table added (SoR / Knowledge Corpus / Telemetry / Cognitive Memory)
 - ✅ Token optimization sentence added to Curate stage
 - ✅ Convergence citation added to Practice 10 (Non-Deterministic Triage Protocol)
@@ -82,7 +82,8 @@ In active development. Core framework documented and published. Distribution pac
 - ✅ Workflow-First Migration tightened with explicit Context Asset governance requirement.
 - ✅ Delivery Model Overlays placement reviewed and kept before Roles so readers see attachment points before role accountability.
 - ✅ Read-time claim updated from ~10 minutes to ~12 minutes; no document split required for v0.1.
-- ✅ Pilot-failure claim now has secondary support in `FRAMEWORK.md` and `README.md`.
+- ✅ Pilot-to-production framing now avoids current-market percentages and focuses on durable governance failure modes.
+- ✅ Moving analyst percentages, dated forecasts, and benchmark status claims neutralized across public-facing docs.
 ---
 
 ## In flight
@@ -104,19 +105,19 @@ None currently open from the 2026-06-10 framework critique pass.
 - Disconfirming criteria per maturity level
 - Organizational case sketches (sanitized)
 - ContextBoundary rationale write-up + Red/Amber/Green classification criteria
-- Second Gemini Deep Research (2027–2029 predictions angle)
+- Second external research pass for forward-looking enterprise AI adoption risks
 - Namespace claim — GitHub org, domains (.org/.dev/.io), npm/pypi placeholders
 - Services-firm narrative: net-new billable work ContextOps creates
 
 ---
 
-## Traffic signals (as of 2026-05-23)
+## Historical traffic snapshot
 
-- 64 clones / 45 unique cloners in 14 days — zero promotion
-- Clone-heavy / view-light pattern = LLM-mediated discovery confirmed
-- `chatgpt.com` appearing as referrer — GPT web tool indexing via Bing
-- `llms.txt` accessed directly — AI-native distribution working
-- Primary metrics going forward: unique clones + llms.txt views (not page views)
+Snapshot retained as historical project telemetry, not as a standing market claim.
+
+- Early clone-heavy / view-light pattern suggested LLM-mediated discovery
+- `llms.txt` was accessed directly, validating AI-readable distribution as a useful channel
+- Primary metrics going forward: unique clones + `llms.txt` views, not page views
 
 ---
 

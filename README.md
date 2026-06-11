@@ -1,6 +1,6 @@
 # ContextOps
 
-88% of enterprise AI agent pilots fail to reach production. Not model problems — governance, scoping, and ownership problems. Organisations are deploying probabilistic systems without deterministic governance structures to contain them.
+Enterprise AI agent pilots often fail to reach durable production when governance, scoping, ownership, and operating context are unclear. The failure mode is usually not the model alone. Organizations are deploying probabilistic systems without deterministic governance structures to contain them.
 
 ContextOps is the organizational context governance layer in the context-stack. It answers one question: how does an org govern the context its AI agents depend on? It is vendor-neutral, open-source, and built for enterprise practitioners — not individual prompt optimization.
 
@@ -16,7 +16,7 @@ Full doctrine: https://github.com/kannanokannan/context-stack
 
 ---
 
-88% of enterprise AI agent pilots fail to reach production in 2026 (Forrester and Anaconda, 2026; corroborated by IDC and the MIT Sloan CIO panel). Not because the models are wrong. Forrester's root-cause analysis finds none of the primary failure modes are model-quality problems — they are scoping, governance, and ownership problems. Organizational context, governance, and operating model gaps are the primary structural cause.
+Enterprise AI agent pilots routinely stall before durable production. Not because the models are always wrong, but because the surrounding system is under-specified: unclear success criteria, weak tool and data access, stale evaluation coverage, missing ownership, and no operating loop for context drift. Organizational context, governance, and operating model gaps are the structural cause.
 
 The tools are capable. The plumbing (MCP, agent frameworks, APIs) is maturing. The methodology layer is missing.
 
