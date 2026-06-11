@@ -3,7 +3,7 @@
 **Enterprise AI Context Framework**
 
 > **Version:** 0.1 (Draft)
-> **Read time:** ~10 minutes
+> **Read time:** ~12 minutes
 > **License:** Apache 2.0
 
 ---
@@ -60,7 +60,7 @@ Precise vocabulary is itself a deliverable. Buzzword drift — where "agent," "c
 
 ### Abstract Enterprise Taxonomy
 
-Where context originates determines which Spine stage is responsible for governing it.
+Where context originates determines which Spine stage is responsible for governing it. Capture records the tier for every candidate asset. Curate uses the tier to decide ownership, canonical source, conflict handling, access boundary, and shape constraint before the asset is supplied to an agent.
 
 | Tier | Examples | ContextOps stage |
 |------|----------|-----------------|
@@ -87,9 +87,9 @@ ContextOps owns the Context leg. It connects People and Process to make Context 
 
 ## The Spine: Capture → Curate → Supply → Renew
 
-The ContextOps operating cycle runs in four stages. Each stage is a practice area with named roles, activities, and outputs. The loop is continuous. Done is not a meaningful state.
+The ContextOps operating cycle runs in four stages. Each stage is a practice area with named roles, activities, and outputs. The loop is Continuous Context Operations (CCO): done is not a meaningful state because organizational reality keeps changing.
 
-**Capture** — Extract context from the places where it currently lives: expert heads, legacy documentation, system configurations, process maps. Key activities include confirming the nature of the problem before designing for it (wicked vs. tame), mapping what happens to the agent's output downstream, and calibrating the mental models stakeholders hold before design begins.
+**Capture** — Extract context from the places where it currently lives: expert heads, legacy documentation, system configurations, process maps. Key activities include confirming the nature of the problem before designing for it (wicked vs. tame), mapping what happens to the agent's output downstream, calibrating the mental models stakeholders hold before design begins, and tagging each candidate asset by taxonomy tier so downstream governance starts from the right source type.
 
 **Curate** — Structure, assign ownership, approve, and version Context Assets. Raw knowledge becomes governable context here. Key activities include building the Context Inventory, assigning Context Owners per domain, reconciling contradictory sources before agents consume them, and defining tolerance bands — standards define guardrails, not exact shapes, because 50% of any system reflects the builder's judgment even with standards in place. Token optimization — selecting and compressing the highest-signal context before it reaches the agent's context window — is the primary technical discipline of this stage.
 
@@ -109,7 +109,7 @@ The Abstract Enterprise Taxonomy becomes operational in this stage. Systems of R
 
 **Supply** — Deliver context to agents via MCP and APIs, manage access permissions, and onboard new agents with complete context packages. Two critical gates apply: the Transition Context Audit before any Build-to-Run handover, and the AI Amplifier Assessment before any agent gains production access — to verify the consuming workflow is ready to be amplified.
 
-**Renew** — Monitor context drift, refresh aging assets, retire obsolete context, and trigger re-Capture when organizational reality changes. This stage is what separates ContextOps from a one-time documentation project. Three practices anchor it: Freshness Scoring (proactive aging signals), Transition Context Audit (handover gate), and Non-Deterministic Triage (operating pattern for incidents in probabilistic systems).
+**Renew** — Monitor context drift, refresh aging assets, retire obsolete context, and trigger re-Capture when organizational reality changes. This stage is the operating home of CCO and what separates ContextOps from a one-time documentation project. Three practices anchor it: Freshness Scoring (proactive aging signals), Transition Context Audit (handover gate), and Non-Deterministic Triage (operating pattern for incidents in probabilistic systems).
 
 ---
 
@@ -137,7 +137,7 @@ The project team leaves. The operations team inherits tickets, partial runbooks,
 
 ContextOps attaches at the Build-to-Run boundary through the Transition Context Audit. Before operations accepts an AI-enabled service, the audit verifies that Context Assets are complete, Context Owners are named, renewal triggers exist, and escalation paths survive the handover.
 
-Once in run state, Context Freshness Scoring and Non-Deterministic Triage Protocol become the main operating practices. The goal is simple: operations should not have to reconstruct organizational intent from incident history.
+Once in run state, Context Freshness Scoring and Non-Deterministic Triage Protocol become the main operating practices. This is CCO in practice: operations keeps agents aligned with current organizational reality instead of treating context as a closed project deliverable. The goal is simple: operations should not have to reconstruct organizational intent from incident history.
 
 ### Waterfall / Project Overlay
 
@@ -193,6 +193,18 @@ Five levels. Used as a gate, not a ladder. Organizations below Level 2 should ad
 
 **Gate rule:** ContextOps practices apply at Level 2 and above. Below Level 2, the intervention is foundational — shared vocabulary, problem definition, stakeholder alignment. Applying ContextOps to a Level 1 organization adds paperwork to confusion.
 
+### Level 1 Foundation Path
+
+Level 1 organizations are not rejected; they are routed to foundation work before ContextOps is applied. The path is deliberately small:
+
+1. Establish shared vocabulary for agent, context, owner, workflow, and production.
+2. Run the Problem Statement Test on one candidate AI initiative.
+3. Name the end-to-end workflow the initiative is meant to change.
+4. Identify the first five Context Assets that workflow depends on.
+5. Assign temporary Context Owners for those assets.
+
+When those five steps are complete, the organization has enough structure to enter Level 2 and start the Capture stage without turning confusion into governance paperwork.
+
 ---
 
 ## Named Practices
@@ -212,7 +224,7 @@ Map not just what the agent does, but what happens to its output. Who acts on it
 Before any Build-to-Run handover, the receiving operations team verifies: (a) context inventory is complete, (b) context ownership transfers are explicitly named, (c) renewal triggers are identified, (d) escalation paths to original builders are preserved. The AMS scramble — where operations teams land with limited transition knowledge and rebuild from scratch in their own way — is consistent enough across organizations to require a named gate. AI agents inherit this failure pattern without this practice.
 
 **5. Workflow-First Migration** *(Cross-cutting)*
-When ContextOps is deployed in a tool-replacement context, the unit of migration must be the workflow with its affordances — not the tool. Tool-for-tool replacement fails because users' workflows are built around the old tool's specific capabilities. Replacing a legacy collaboration platform with a modern suite by mapping features rather than workflows fails not because of the tools but because the workflow affordances were never mapped or preserved. The Two-Cost-Line Diagnostic is the detection mechanism.
+When ContextOps is deployed in a tool-replacement context, the unit of migration must be the workflow with its affordances — not the tool. Tool-for-tool replacement fails because users' workflows are built around the old tool's specific capabilities. Replacing a legacy collaboration platform with a modern suite by mapping features rather than workflows fails not because of the tools but because the workflow affordances were never mapped or preserved. The Context Asset connection is explicit: every critical affordance must be represented as governed context, with an owner, validity rule, and downstream consumer before the new workflow is considered ready. The Two-Cost-Line Diagnostic is the detection mechanism.
 
 **6. Context Freshness Scoring** *(Renew)*
 Every Context Asset is tagged with a freshness budget set by its Context Owner — the maximum age before re-verification is required. Budgets vary by volatility: pricing changes weekly, org structure shifts monthly, cultural norms move yearly. Assets past their budget are flagged in the Context Inventory, and agents consuming expired assets are surfaced as operating at risk. Re-verification means a named human confirmed the asset is current, not that a sync job ran. Stale context surfaces in agent systems as confident wrong output — fluent, plausible, and indistinguishable from truth until a human catches it. Freshness Scoring is what gives Context Assets the same operational visibility as production infrastructure. An asset without a freshness signal is an asset without monitoring.

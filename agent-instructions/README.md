@@ -84,6 +84,14 @@ Count "yes" answers. Count "partial" as half.
 - 7–8: **Level 4 (Managed)** — Renew stage and metric discipline.
 - 9–10: **Level 5 (Optimizing)** — Framework metrics drive investment.
 
+If the result is Level 1, do not recommend a full ContextOps practice rollout. Recommend the Level 1 Foundation Path:
+
+1. Establish shared vocabulary for agent, context, owner, workflow, and production.
+2. Run the Problem Statement Test on one candidate AI initiative.
+3. Name the end-to-end workflow the initiative is meant to change.
+4. Identify the first five Context Assets that workflow depends on.
+5. Assign temporary Context Owners for those assets.
+
 ### Step 4 — Output the Report
 
 Produce a structured report in exactly this format:
@@ -109,11 +117,11 @@ Three Largest Gaps:
 Recommended Starting Point:
   Spine Stage: [Capture / Curate / Supply / Renew]
   Named Practice: [one specific practice from FRAMEWORK.md]
-  Rationale: [one sentence on why this practice given the gaps]
+  Rationale: [one sentence on why this practice given the gaps; for Level 1, say Foundation Path instead of naming a rollout practice]
 
 Red Flags:
   [Two-Cost-Line if flagged]
-  [Below Level 2 if applicable - recommend foundational work before ContextOps]
+  [Below Level 2 if applicable - recommend the Level 1 Foundation Path before ContextOps]
   [None if no flags]
 
 Next Read:

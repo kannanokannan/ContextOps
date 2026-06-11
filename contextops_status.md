@@ -1,7 +1,7 @@
 # ContextOps — Project Status
 
 **Version:** 0.1 (Draft)
-**Last updated:** 2026-06-10
+**Last updated:** 2026-06-11
 **Canonical source:** This file. Do not track status elsewhere.
 
 ---
@@ -76,6 +76,13 @@ In active development. Core framework documented and published. Distribution pac
 
 - ✅ Stack positioning aligned with context-stack: ContextOps as organizational context governance, ContextBoundary as egress governance, Sthala as runtime reference implementation, and Griha as product layer.
 - ✅ Curate stage strengthened with explicit governed Context Asset outputs: canonical source, owner, validity rule, conflict rule, access boundary, shape constraint, and downstream consumers.
+- ✅ Continuous Context Operations (CCO) threaded through the Spine, AMS / Run overlay, and machine-readable manifest.
+- ✅ Level 1 foundation readiness path added to `FRAMEWORK.md`, `framework.yaml`, and `agent-instructions/README.md`.
+- ✅ Abstract Enterprise Taxonomy connected to Capture and Curate work.
+- ✅ Workflow-First Migration tightened with explicit Context Asset governance requirement.
+- ✅ Delivery Model Overlays placement reviewed and kept before Roles so readers see attachment points before role accountability.
+- ✅ Read-time claim updated from ~10 minutes to ~12 minutes; no document split required for v0.1.
+- ✅ Pilot-failure claim now has secondary support in `FRAMEWORK.md` and `README.md`.
 ---
 
 ## In flight
@@ -84,19 +91,9 @@ Nothing currently in flight.
 
 ---
 
-## Remaining framework critique action items (2026-06-10)
+## Remaining framework critique action items (2026-06-11)
 
-These are not defects in v0.1. They are the remaining editorial and structural improvements to keep the framework credible as traffic increases.
-
-| Priority | Action item | Why it matters | Target artifact |
-|----------|-------------|----------------|-----------------|
-| P1 | Thread Continuous Context Operations (CCO) back through the framework | CCO is defined in vocabulary but should also appear in the Spine, AMS / Run overlay, and maturity model | `FRAMEWORK.md`, `framework.yaml` |
-| P1 | Add a Level 1 foundation readiness path | The maturity gate says Level 1 organizations need foundational work first; they need a concrete path, not only a rejection gate | `FRAMEWORK.md`, `agent-instructions/README.md` |
-| P1 | Connect the Abstract Enterprise Taxonomy to Capture and Curate work | The taxonomy is useful but currently isolated; readers need to know how it drives actual context governance | `FRAMEWORK.md` |
-| P2 | Tighten Workflow-First Migration's link to context governance | Practice 5 is valid but should make the Context Asset connection more explicit | `FRAMEWORK.md` |
-| P2 | Review Delivery Model Overlays placement during the next framework organization pass | The section is useful; placement may be better after Named Practices once readers know the practice names | `FRAMEWORK.md` |
-| P2 | Revisit read-time claim and possible document split | FRAMEWORK.md may now read longer than 10 minutes; split only if maintenance cost is justified | `FRAMEWORK.md`, possible `PRACTICES.md` |
-| P2 | Add secondary support for the pilot-failure claim | The 88% stat is useful but should not carry the whole Why Now argument alone | `FRAMEWORK.md`, `README.md` |
+None currently open from the 2026-06-10 framework critique pass.
 
 ---
 

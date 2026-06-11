@@ -26,7 +26,7 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 
 ## Quick Start
 
-1. **Read** [`FRAMEWORK.md`](FRAMEWORK.md) — the framework in ~10 minutes.
+1. **Read** [`FRAMEWORK.md`](FRAMEWORK.md) — the framework in ~12 minutes.
 2. **Run a self-assessment** — Point any AI agent (Claude, ChatGPT, Gemini, Copilot) at [`agent-instructions/README.md`](agent-instructions/README.md) and the agent will walk you through it.
 3. **Connect your existing AI stack** — See [`mappings/technical-layer/`](mappings/technical-layer/) for connector documentation covering RAG pipelines, agent memory frameworks, and orchestration tools.
 
@@ -40,7 +40,7 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
 /contextops
 ├── README.md                          ← You are here
 ├── DOCUMENT_MAP.md                    ← Reader's guide by role and goal
-├── FRAMEWORK.md                       ← The framework (10 min read)
+├── FRAMEWORK.md                       ← The framework (12 min read)
 ├── LICENSE                            ← Apache 2.0
 ├── CLAUDE.md                          ← Claude Code instructions
 ├── framework.yaml                     ← Machine-readable manifest

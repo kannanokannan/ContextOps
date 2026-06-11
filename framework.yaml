@@ -35,12 +35,12 @@ triad:
 
 spine:
   description: >
-    The continuous operating cycle for AI context governance.
-    Done is not a meaningful state.
+    The Continuous Context Operations cycle for AI context governance.
+    Done is not a meaningful state because organizational reality keeps changing.
   stages:
     - id: capture
       name: Capture
-      description: Extract context from where it currently lives
+      description: Extract context from where it currently lives and tag candidate assets by taxonomy tier
       practices: [problem-statement-test, mental-model-calibration, downstream-task-tracing]
 
     - id: curate
@@ -55,10 +55,21 @@ spine:
 
     - id: renew
       name: Renew
-      description: Monitor drift, refresh assets, retire obsolete context
+      description: Monitor drift, refresh assets, retire obsolete context, and operate CCO in run state
       practices: [transition-context-audit, context-freshness-scoring, non-deterministic-triage-protocol]
 
   cross_cutting_practices: [workflow-first-migration, scale-parity-check]
+
+continuous_context_operations:
+  abbreviation: CCO
+  definition: >
+    The run-state practice of keeping AI agents continuously aligned with
+    current organizational reality.
+  primary_stage: renew
+  run_state_practices:
+    - transition-context-audit
+    - context-freshness-scoring
+    - non-deterministic-triage-protocol
 
 roles:
   - id: context-architect
@@ -117,6 +128,12 @@ maturity_model:
     ContextOps applies at Level 2 and above. Below Level 2, address
     foundational capability first (shared vocabulary, problem
     definition, stakeholder alignment).
+  level_1_foundation_path:
+    - Establish shared vocabulary for agent, context, owner, workflow, and production
+    - Run the Problem Statement Test on one candidate AI initiative
+    - Name the end-to-end workflow the initiative is meant to change
+    - Identify the first five Context Assets that workflow depends on
+    - Assign temporary Context Owners for those assets
 
 named_practices:
   - id: problem-statement-test
