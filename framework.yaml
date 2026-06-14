@@ -5,7 +5,7 @@ framework:
   name: ContextOps
   full_name: Enterprise AI Context Framework
   version: 0.1
-  status: draft
+  status: active
   license: Apache-2.0
   tagline: ITIL for AI context
   thesis: >
@@ -50,7 +50,7 @@ spine:
 
     - id: supply
       name: Supply
-      description: Deliver context to agents, manage access, onboard new agents
+      description: Package governed context for approved consuming agents and workflows
       practices: [transition-context-audit, ai-amplifier-assessment]
 
     - id: renew

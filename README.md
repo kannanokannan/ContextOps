@@ -46,7 +46,6 @@ Not sure where to start? See [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) — a reader's
 ├── framework.yaml                     ← Machine-readable manifest
 ├── llms.txt                           ← Agent-readable index (llmstxt.org spec)
 ├── contextops_status.md               ← Project status (canonical)
-├── contextboundary_status.md          ← ContextBoundary sibling project status
 ├── /agent-instructions/
 │   └── README.md                      ← AI agent prompt for self-assessment
 ├── /docs/
@@ -96,9 +95,9 @@ To add a connector for a framework not listed, copy [`mappings/technical-layer/T
 
 ## Status
 
-**v0.1** — Draft. Published for feedback, not yet certified or finalized.
+**v0.1** — Active. Published for feedback and field validation.
 
-Ten named practices documented across the full Spine (Capture → Curate → Supply → Renew). Some sections remain stubbed pending field validation. See `FRAMEWORK.md` for the current state.
+Ten named practices documented across the full Spine (Capture → Curate → Supply → Renew). See `FRAMEWORK.md` for the current state.
 
 ---
 
@@ -128,7 +127,7 @@ This project is part of the [context-stack](https://github.com/kannanokannan/con
 |---------|-------|----------|------|
 | ContextOps | Organizational context governance | How does an org govern its AI context? | [github.com/kannanokannan/ContextOps](https://github.com/kannanokannan/ContextOps) |
 | ContextBoundary | Egress governance | Where is data allowed to go? | [github.com/kannanokannan/ContextBoundary](https://github.com/kannanokannan/ContextBoundary) |
-| Sthala | Runtime reference implementation | Where does the AI actually run? | [github.com/kannanokannan/Sthala](https://github.com/kannanokannan/Sthala) |
+| Sthala | Governed runtime reference | Where does the AI actually run? | [github.com/kannanokannan/Sthala](https://github.com/kannanokannan/Sthala) |
 | Griha | Product layer | How do the stack principles appear in a working system? | [github.com/kannanokannan/Griha](https://github.com/kannanokannan/Griha) |
 
 Canonical terminology and cross-project decisions live in [context-stack](https://github.com/kannanokannan/context-stack).

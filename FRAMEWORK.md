@@ -2,7 +2,7 @@
 
 **Enterprise AI Context Framework**
 
-> **Version:** 0.1 (Draft)
+> **Version:** 0.1
 > **Read time:** ~12 minutes
 > **License:** Apache 2.0
 
@@ -12,7 +12,7 @@
 
 ContextOps is a vendor-neutral, open-source methodology for enterprise AI context governance. It gives organizations a standardized way to capture, structure, govern, and supply organizational context to AI agents.
 
-Within the wider context-stack, ContextOps is the organizational context governance layer. It answers one question: how does an organization govern the context its AI agents depend on? ContextBoundary governs where that context is allowed to flow. Sthala defines one compliant runtime shape. Griha is the product layer above the three governance projects.
+Within the wider context-stack, ContextOps is the organizational context governance layer. It answers one question: how does an organization govern the context its AI agents depend on? ContextBoundary governs where that context is allowed to flow. Sthala defines governed runtime placement. Griha is the product layer above the three governance projects.
 
 Context — the policies, runbooks, data dictionaries, role definitions, and escalation paths an agent needs to operate sensibly — is the primary bottleneck in enterprise AI adoption. The tools are capable. The plumbing (MCP, agent frameworks, APIs) is maturing. The methodology layer is missing.
 
@@ -20,7 +20,7 @@ ContextOps fills that gap. It sits on top of ITIL, TOGAF, COBIT, and NIST AI RMF
 
 **North Star:** ITIL for AI context.
 
-ContextOps is not the ITIL Service Knowledge Management System (SKMS) or a CMDB extension. ITIL SKMS manages configuration items and service knowledge for deterministic IT systems — systems where inputs produce predictable outputs and failures reproduce. ContextOps manages runtime context supply for probabilistic AI agents: token windows, prompt construction, context drift across inference calls. These are different problems requiring different disciplines. ContextOps does not replace SKMS; it governs what flows into the agent that SKMS cannot see.
+ContextOps is not the ITIL Service Knowledge Management System (SKMS) or a CMDB extension. ITIL SKMS manages configuration items and service knowledge for deterministic IT systems — systems where inputs produce predictable outputs and failures reproduce. ContextOps manages operational context supply for probabilistic AI agents: token windows, prompt construction, context provenance, freshness, and drift across inference calls. These are different problems requiring different disciplines. ContextOps does not replace SKMS; it governs what flows into the agent that SKMS cannot see.
 
 ---
 
@@ -60,7 +60,7 @@ Precise vocabulary is itself a deliverable. Buzzword drift — where "agent," "c
 
 ### Abstract Enterprise Taxonomy
 
-Where context originates determines which Spine stage is responsible for governing it. Capture records the tier for every candidate asset. Curate uses the tier to decide ownership, canonical source, conflict handling, access boundary, and shape constraint before the asset is supplied to an agent.
+Where context originates determines which Spine stage is responsible for governing it. Capture records the tier for every candidate asset. Curate uses the tier to decide ownership, canonical source, conflict handling, consumers, and shape constraint before the asset is supplied to an agent.
 
 | Tier | Examples | ContextOps stage |
 |------|----------|-----------------|
@@ -101,13 +101,13 @@ A raw item does not become a Context Asset merely because it is stored. In Curat
 | Context Owner | Who is accountable for accuracy and currency? |
 | Validity rule | When does this asset expire or require re-verification? |
 | Conflict rule | What happens when sources disagree? |
-| Access boundary | Which agents, roles, or workflows may consume it? |
+| Consumers | Which approved agents, roles, or workflows may consume it? |
 | Shape constraint | How should it be compressed, chunked, or framed before it reaches an agent? |
 | Downstream consumers | Who or what depends on this context being right? |
 
-The Abstract Enterprise Taxonomy becomes operational in this stage. Systems of Record anchor canonical source decisions. Knowledge Corpus assets require ownership and conflict rules. Telemetry primarily triggers Renew. Cognitive Memory requires the tightest access and shape constraints because it changes through use.
+The Abstract Enterprise Taxonomy becomes operational in this stage. Systems of Record anchor canonical source decisions. Knowledge Corpus assets require ownership and conflict rules. Telemetry primarily triggers Renew. Cognitive Memory requires the tightest consumer and shape constraints because it changes through use.
 
-**Supply** — Deliver context to agents via MCP and APIs, manage access permissions, and onboard new agents with complete context packages. Two critical gates apply: the Transition Context Audit before any Build-to-Run handover, and the AI Amplifier Assessment before any agent gains production access — to verify the consuming workflow is ready to be amplified.
+**Supply** — Package governed context for approved consuming agents and workflows. The delivery mechanism may be MCP, APIs, retrieval pipelines, or another implementation path; ContextOps governs the context package, provenance, freshness, and declared consumers, not the transport layer or tool permissions. Two critical gates apply: the Transition Context Audit before any Build-to-Run handover, and the AI Amplifier Assessment before any agent gains production access — to verify the consuming workflow is ready to be amplified.
 
 **Renew** — Monitor context drift, refresh aging assets, retire obsolete context, and trigger re-Capture when organizational reality changes. This stage is the operating home of CCO and what separates ContextOps from a one-time documentation project. Three practices anchor it: Freshness Scoring (proactive aging signals), Transition Context Audit (handover gate), and Non-Deterministic Triage (operating pattern for incidents in probabilistic systems).
 
@@ -127,7 +127,7 @@ What changes is where the Spine attaches. Each delivery model loses context in a
 |---------------|-------------------|---------------------------|
 | AMS / Run | Context decays after handover; ownership disappears; operations teams rebuild intent from tickets, runbooks, and system scraps. | Transition Context Audit, Context Freshness Scoring, Non-Deterministic Triage Protocol |
 | Waterfall / Project | Context is frozen too early; requirements documents become stale before go-live. | Context Baseline, Context Delta Review, Transition Context Audit |
-| Agile / Product | Context changes every sprint; decisions live in ceremonies, backlog comments, chats, and people's heads. | Sprint Context Capture, Backlog Context Hygiene, Release Context Audit |
+| Agile / Product | Context changes every sprint; decisions live in ceremonies, work-item comments, chats, and people's heads. | Sprint Context Capture, Work-Item Context Hygiene, Release Context Audit |
 
 ### AMS / Run Overlay
 
@@ -155,7 +155,7 @@ The Waterfall problem is not documentation shortage. It is stale documentation w
 
 In Agile and product delivery, context fails because it moves too quickly.
 
-Sprint planning, backlog refinement, reviews, retrospectives, design discussions, and support conversations all create context. Much of it never becomes a governed asset. It remains in tickets, chats, meetings, and team memory.
+Sprint planning, work-item refinement, reviews, retrospectives, design discussions, and support conversations all create context. Much of it never becomes a governed asset. It remains in tickets, chats, meetings, and team memory.
 
 ContextOps attaches lightly to the sprint rhythm. Definition of Ready should identify the context source and owner for any AI-relevant work. Definition of Done should include required updates to affected Context Assets. Release readiness should include a Release Context Audit before production promotion.
 
@@ -263,6 +263,7 @@ Standard ITIL incident management assumes determinism: same input produces same 
 - Not applicable below Maturity Level 2 — foundational work must come first
 - Not a solution to wicked problems — it governs context, it does not define strategy
 - Not consulting-as-a-product — though services firms will implement it
+- Not responsible for egress policy, runtime placement, MCP implementation, tool permissions, or approval of side effects
 
 ContextOps does not own problem definition, human and political dynamics beyond the context chain, or vendor and tooling decisions. It owns context discipline and the AI operating model. Being explicit about what the framework does not own makes the claim on what it does own credible.
 
@@ -290,7 +291,7 @@ Each of the seven roles below sees a different version of the same problem. Cont
 
 ## Assessment Instruments
 
-> 🚧 Full instruments are v0.2 scope. Minimal versions below serve as v0.1 starting points.
+The minimal instruments below support v0.1 adoption. Broader instruments should be added only after field validation.
 
 ### Two-Cost-Line Diagnostic
 
@@ -312,7 +313,7 @@ Three questions for any enterprise running an AI program alongside a legacy syst
 
 Point any AI agent (Claude, ChatGPT, Gemini, Copilot, or similar) at [`agent-instructions/README.md`](agent-instructions/README.md). The agent will walk through a maturity assessment, run the Two-Cost-Line Diagnostic, and produce a scored snapshot with recommended starting points.
 
-> 🚧 **STUB:** Ten-question pre-flight culture diagnostic. Pending field validation.
+The ten-question pre-flight culture diagnostic requires field validation before publication.
 
 ---
 
@@ -362,6 +363,6 @@ It does not replace any of them.
 
 ---
 
-*ContextOps v0.1 — Draft. Stubs marked. Feedback welcome via GitHub Issues.*
+*ContextOps v0.1. Feedback welcome via GitHub Issues.*
 
 *Licensed under Apache 2.0.*

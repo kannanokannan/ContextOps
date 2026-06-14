@@ -15,7 +15,7 @@ Read **[`FRAMEWORK.md`](FRAMEWORK.md)** end to end. That is the whole framework.
 Read in this order:
 
 1. **[`README.md`](README.md)** — what this is, in one page
-2. **[`FRAMEWORK.md`](FRAMEWORK.md)** — the framework, ~10 minutes
+2. **[`FRAMEWORK.md`](FRAMEWORK.md)** — the framework, ~12 minutes
 3. **[`FRAMEWORK.md` → What ContextOps is NOT](FRAMEWORK.md#what-contextops-is-not)** — confirm the scope claim
 4. **[`FRAMEWORK.md` → Roots](FRAMEWORK.md#roots)** — confirm the precedents you sit on top of
 
@@ -108,7 +108,6 @@ All ten live in **[`FRAMEWORK.md` → Named Practices](FRAMEWORK.md#named-practi
 ├── LICENSE                            ← Apache 2.0
 ├── CLAUDE.md                          ← Claude Code instructions
 ├── contextops_status.md               ← Project status (canonical)
-├── contextboundary_status.md          ← ContextBoundary sibling project status
 ├── /agent-instructions/
 │   └── README.md                      ← AI agent self-assessment prompt
 ├── /docs/

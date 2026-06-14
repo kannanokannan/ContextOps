@@ -24,7 +24,7 @@ License: Apache 2.0. Status: v0.1 active.
 
 - [context-stack](https://github.com/kannanokannan/context-stack): Canonical terminology, locked decisions, and family framing for the stack
 - [ContextBoundary](https://github.com/kannanokannan/ContextBoundary): Egress governance specification for AI data flows
-- [Sthala](https://github.com/kannanokannan/Sthala): Sovereign on-prem AI reference framework
+- [Sthala](https://github.com/kannanokannan/Sthala): Governed runtime reference framework
 - [Griha](https://github.com/kannanokannan/Griha): Product layer above the three governance projects
 
 ## How an agent self-bootstraps an org assessment

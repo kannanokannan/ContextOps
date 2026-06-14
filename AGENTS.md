@@ -37,7 +37,7 @@ ContextOps is one of three sibling governance projects in the context-stack. Gri
 |---------|-------|---------|------|
 | **ContextOps** | Organizational context governance | How does an org govern its AI context? | https://github.com/kannanokannan/ContextOps |
 | **ContextBoundary** | Egress governance | Where is data allowed to go? | https://github.com/kannanokannan/ContextBoundary |
-| **Sthala** | Runtime reference implementation | Where does the AI actually run? | https://github.com/kannanokannan/Sthala |
+| **Sthala** | Governed runtime reference | Where does the AI actually run? | https://github.com/kannanokannan/Sthala |
 | **Griha** | Product layer | How do the stack principles appear in a working system? | https://github.com/kannanokannan/Griha |
 
 **Key relationship rules:**

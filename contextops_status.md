@@ -1,14 +1,14 @@
 # ContextOps — Project Status
 
-**Version:** 0.1 (Draft)
-**Last updated:** 2026-06-11
+**Version:** 0.1
+**Last updated:** 2026-06-14
 **Canonical source:** This file. Do not track status elsewhere.
 
 ---
 
 ## Overall status
 
-In active development. Core framework documented and published. Distribution packs shipped across 10 LLM environments. Field validation is v0.2 scope.
+Active v0.1. Core framework documented and published. Distribution packs shipped across 10 LLM environments. Field validation remains separate from public status tracking.
 
 ---
 
@@ -27,7 +27,6 @@ In active development. Core framework documented and published. Distribution pac
 | Technical layer — MemGPT mapping | `mappings/technical-layer/memgpt.md` | ✅ Complete (v0.1) |
 | Technical layer — RAG Pipeline mapping | `mappings/technical-layer/rag-pipeline.md` | ✅ Complete (v0.1) |
 | Comparison — ContextOps vs. DORA | `docs/comparisons/contextops-vs-dora.md` | ✅ Complete (v0.1) |
-| ContextBoundary project status | `contextboundary_status.md` | ✅ Active (concept phase) |
 | Distribution Packs | `distributions/` | ✅ Complete (v0.1) — 10 LLM environments |
 | License | `LICENSE` | ✅ Apache 2.0 |
 
@@ -55,7 +54,6 @@ In active development. Core framework documented and published. Distribution pac
 
 - ✅ `mappings/technical-layer/rag-pipeline.md` — RAG Pipeline connector
 - ✅ `docs/comparisons/contextops-vs-dora.md` — DORA comparison
-- ✅ `contextboundary_status.md` — ContextBoundary sibling project tracking
 - ✅ `distributions/` — 10 LLM-specific install packs (Claude Code, Cursor, Windsurf, Cline, Aider, Copilot GitHub, Copilot M365, ChatGPT, Gemini, Generic)
 
 ### Structural fixes
@@ -74,8 +72,8 @@ In active development. Core framework documented and published. Distribution pac
 
 ### Framework critique follow-ups
 
-- ✅ Stack positioning aligned with context-stack: ContextOps as organizational context governance, ContextBoundary as egress governance, Sthala as runtime reference implementation, and Griha as product layer.
-- ✅ Curate stage strengthened with explicit governed Context Asset outputs: canonical source, owner, validity rule, conflict rule, access boundary, shape constraint, and downstream consumers.
+- ✅ Stack positioning aligned with context-stack: ContextOps as organizational context governance, ContextBoundary as egress governance, Sthala as governed runtime reference, and Griha as product layer.
+- ✅ Curate stage strengthened with explicit governed Context Asset outputs: canonical source, owner, validity rule, conflict rule, consumers, shape constraint, and downstream consumers.
 - ✅ Continuous Context Operations (CCO) threaded through the Spine, AMS / Run overlay, and machine-readable manifest.
 - ✅ Level 1 foundation readiness path added to `FRAMEWORK.md`, `framework.yaml`, and `agent-instructions/README.md`.
 - ✅ Abstract Enterprise Taxonomy connected to Capture and Curate work.
@@ -98,19 +96,6 @@ None currently open from the 2026-06-10 framework critique pass.
 
 ---
 
-## v0.2 scope (not started)
-
-- Full maturity self-assessment instrument (ten-question scored)
-- Pre-flight culture diagnostic (field validation pending)
-- Disconfirming criteria per maturity level
-- Organizational case sketches (sanitized)
-- ContextBoundary rationale write-up + Red/Amber/Green classification criteria
-- Second external research pass for forward-looking enterprise AI adoption risks
-- Namespace claim — GitHub org, domains (.org/.dev/.io), npm/pypi placeholders
-- Services-firm narrative: net-new billable work ContextOps creates
-
----
-
 ## Historical traffic snapshot
 
 Snapshot retained as historical project telemetry, not as a standing market claim.
@@ -121,9 +106,9 @@ Snapshot retained as historical project telemetry, not as a standing market clai
 
 ---
 
-## Sibling project
+## Stack boundary
 
-**ContextBoundary** — sovereignty and compute placement layer. Tracked in `contextboundary_status.md`.
+ContextOps does not track sibling project status. ContextBoundary, Sthala, and Griha statuses belong in their own repos. Cross-project terminology and locked decisions belong in `context-stack`.
 
 ---
 
