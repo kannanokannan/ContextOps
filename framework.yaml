@@ -71,6 +71,21 @@ continuous_context_operations:
     - context-freshness-scoring
     - non-deterministic-triage-protocol
 
+agent_authority:
+  document: agent-authority.md
+  scope: >
+    Governance responsibilities for agentic AI accountability, autonomy tiering,
+    least-agency defaults, and tool/MCP source supply policy.
+  responsibilities:
+    - id: A1
+      name: Named accountable owner
+    - id: A2
+      name: Autonomy Tier
+    - id: A3
+      name: Least Agency
+    - id: A4
+      name: Tool Supply Policy
+
 roles:
   - id: context-architect
     title: Context Architect
@@ -254,6 +269,7 @@ assessment_instruments:
 resources:
   framework_document: FRAMEWORK.md
   document_map: DOCUMENT_MAP.md
+  agent_authority: agent-authority.md
   agent_instructions: agent-instructions/README.md
   technical_layer_mappings: mappings/technical-layer/README.md
   license: LICENSE

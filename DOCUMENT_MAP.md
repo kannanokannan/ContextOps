@@ -61,6 +61,7 @@ Three sections, in order:
 |----------|-------|
 | Machine-readable manifest | [`framework.yaml`](framework.yaml) |
 | Agent self-assessment prompt | [`agent-instructions/README.md`](agent-instructions/README.md) |
+| Agent authority governance | [`agent-authority.md`](agent-authority.md) |
 | Connect a memory framework | [`mappings/technical-layer/README.md`](mappings/technical-layer/README.md) |
 | Add a new technical mapping | [`mappings/technical-layer/TEMPLATE.md`](mappings/technical-layer/TEMPLATE.md) |
 
@@ -103,6 +104,7 @@ All ten live in **[`FRAMEWORK.md` → Named Practices](FRAMEWORK.md#named-practi
 ├── README.md                          ← One-page overview
 ├── DOCUMENT_MAP.md                    ← You are here
 ├── FRAMEWORK.md                       ← The framework (10 min read)
+├── agent-authority.md                 ← Agent-authority governance module
 ├── framework.yaml                     ← Machine-readable manifest
 ├── llms.txt                           ← Agent-readable index
 ├── LICENSE                            ← Apache 2.0

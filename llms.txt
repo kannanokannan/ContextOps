@@ -17,6 +17,7 @@ License: Apache 2.0. Status: v0.1 active.
 - [README.md](https://github.com/kannanokannan/ContextOps/blob/main/README.md): Project overview
 - [DOCUMENT_MAP.md](https://github.com/kannanokannan/ContextOps/blob/main/DOCUMENT_MAP.md): Navigation across all artifacts
 - [framework.yaml](https://github.com/kannanokannan/ContextOps/blob/main/framework.yaml): Machine-readable manifest
+- [agent-authority.md](https://github.com/kannanokannan/ContextOps/blob/main/agent-authority.md): Agent-authority governance module (A1-A4)
 - [agent-instructions/README.md](https://github.com/kannanokannan/ContextOps/blob/main/agent-instructions/README.md): AI-run self-assessment agent
 - [mappings/technical-layer/README.md](https://github.com/kannanokannan/ContextOps/blob/main/mappings/technical-layer/README.md): Technical-layer mappings (ACE, LangMem, MemGPT)
 
