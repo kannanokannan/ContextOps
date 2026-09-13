@@ -128,6 +128,7 @@ What changes is where the Spine attaches. Each delivery model loses context in a
 | AMS / Run | Context decays after handover; ownership disappears; operations teams rebuild intent from tickets, runbooks, and system scraps. | Transition Context Audit, Context Freshness Scoring, Non-Deterministic Triage Protocol |
 | Waterfall / Project | Context is frozen too early; requirements documents become stale before go-live. | Context Baseline, Context Delta Review, Transition Context Audit |
 | Agile / Product | Context changes every sprint; decisions live in ceremonies, work-item comments, chats, and people's heads. | Sprint Context Capture, Work-Item Context Hygiene, Release Context Audit |
+| Platform / Engineering | Context is embedded in defaults nobody reads; golden paths, reference architectures, and policy modules are consumed at scale and outlive the decisions behind them. | Scale Parity Check, Context Conflict Resolution, Context Freshness Scoring |
 
 ### AMS / Run Overlay
 
@@ -160,6 +161,18 @@ Sprint planning, work-item refinement, reviews, retrospectives, design discussio
 ContextOps attaches lightly to the sprint rhythm. Definition of Ready should identify the context source and owner for any AI-relevant work. Definition of Done should include required updates to affected Context Assets. Release readiness should include a Release Context Audit before production promotion.
 
 The Agile problem is not lack of learning. It is that learning remains local unless it is captured, curated, and supplied back into the operating model.
+
+### Platform / Engineering Overlay
+
+In platform and engineering work, context fails because it is embedded in artifacts nobody treats as context.
+
+Golden paths, reference architectures, service templates, infrastructure modules, policy-as-code repositories, and CI scaffolding all encode organizational decisions. Hundreds of teams consume those decisions as defaults without reading them and without knowing who made them. The context is real, versioned, and consumed at scale, but its authority is implicit and its ownership is usually unnamed.
+
+The failure is not neglect. Platform artifacts decay while they are being heavily used, and adoption masks the decay: the more teams depend on a default, the more expensive it becomes to change, and the longer the decision behind it survives the reasoning that produced it. For AI systems this carries the largest blast radius in the estate. Agents read platform artifacts as ground truth and replicate a stale reference architecture to every team that asks, with no human reading the source.
+
+ContextOps attaches at the point of promotion rather than at a delivery gate. Before a default is published to its consumers, the Scale Parity Check verifies that behavior holds at the shape the platform will actually serve, not at the shape it was designed against. Context Conflict Resolution names the precedence order between the platform default, the team override, and the policy repository, so that agents consuming them do not resolve the disagreement silently. Context Freshness Scoring puts a named owner and a re-verification budget on each published default, giving platform context the same operational visibility as the infrastructure it configures.
+
+The platform problem is not undocumented decisions. It is documented decisions that outlive the reasoning behind them, consumed at scale by teams and agents that never see the reasoning at all.
 
 ContextOps preserves delivery-model autonomy. Teams keep their ceremonies, gates, and tools. ContextOps names the context that must survive them.
 
