@@ -121,13 +121,10 @@ Apache 2.0. Enterprises can use, modify, and build commercial offerings on top o
 
 ## Part of the Stack
 
-This project is part of the [context-stack](https://github.com/kannanokannan/context-stack), a family of open-source projects under [github.com/kannanokannan](https://github.com/kannanokannan). ContextOps, ContextBoundary, and Sthala are the three governance projects. Griha is the product layer above them.
+This project is part of the [context-stack](https://github.com/kannanokannan/context-stack), a family of open-source projects under [github.com/kannanokannan](https://github.com/kannanokannan).
 
-| Project | Layer | Question | Repo |
-|---------|-------|----------|------|
-| ContextOps | Organizational context governance | How does an org govern its AI context? | [github.com/kannanokannan/ContextOps](https://github.com/kannanokannan/ContextOps) |
-| ContextBoundary | Egress governance | Where is data allowed to go? | [github.com/kannanokannan/ContextBoundary](https://github.com/kannanokannan/ContextBoundary) |
-| Sthala | Governed runtime reference | Where does the AI actually run? | [github.com/kannanokannan/Sthala](https://github.com/kannanokannan/Sthala) |
-| Griha | Product layer | How do the stack principles appear in a working system? | [github.com/kannanokannan/Griha](https://github.com/kannanokannan/Griha) |
+ContextOps and ContextBoundary are the specification layer. contextboundary-gw, Sthala and Griha are reference implementations that apply it. The composition is defined once, in [COMPOSITION.md](https://github.com/kannanokannan/context-stack/blob/main/COMPOSITION.md).
+
+ContextOps is one of the two specifications. It governs organizational context: how an organisation governs the context its AI agents depend on.
 
 Canonical terminology and cross-project decisions live in [context-stack](https://github.com/kannanokannan/context-stack).

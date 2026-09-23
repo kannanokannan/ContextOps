@@ -31,14 +31,11 @@ Repo: https://github.com/kannanokannan/ContextOps
 
 ## The Framework Family
 
-ContextOps is one of the two specifications that make up the Context Stack; ContextBoundary is the other. contextboundary-gw, Sthala and Griha are reference implementations that apply those specifications. Do not conflate these scopes.
+ContextOps and ContextBoundary are the specification layer. contextboundary-gw, Sthala and Griha are reference implementations that apply it.
 
-| Project | Layer | Answers | Repo |
-|---------|-------|---------|------|
-| **ContextOps** | Organizational context governance | How does an org govern its AI context? | https://github.com/kannanokannan/ContextOps |
-| **ContextBoundary** | Egress governance | Where is data allowed to go? | https://github.com/kannanokannan/ContextBoundary |
-| **Sthala** | Reference implementation | Where does the AI actually run? | https://github.com/kannanokannan/Sthala |
-| **Griha** | Reference implementation | How do the stack principles appear in a working system? | https://github.com/kannanokannan/Griha |
+The composition is defined once, in COMPOSITION.md: https://github.com/kannanokannan/context-stack/blob/main/COMPOSITION.md
+
+ContextOps is one of the two specifications. It governs organizational context. Do not conflate these scopes.
 
 **Key relationship rules:**
 - ContextOps governs the organisational layer
