@@ -12,7 +12,7 @@
 
 ContextOps is a vendor-neutral, open-source methodology for enterprise AI context governance. It gives organizations a standardized way to capture, structure, govern, and supply organizational context to AI agents.
 
-Within the wider context-stack, ContextOps is the organizational context governance layer. It answers one question: how does an organization govern the context its AI agents depend on? ContextBoundary governs where that context is allowed to flow. Sthala defines governed runtime placement. Griha is the product layer above the three governance projects.
+Within the wider context-stack, ContextOps is the organizational context governance layer. It answers one question: how does an organization govern the context its AI agents depend on? ContextBoundary governs where that context is allowed to flow. ContextOps and ContextBoundary are the specification layer. contextboundary-gw, Sthala and Griha are reference implementations that apply it.
 
 Context — the policies, runbooks, data dictionaries, role definitions, and escalation paths an agent needs to operate sensibly — is the primary bottleneck in enterprise AI adoption. The tools are capable. The plumbing (MCP, agent frameworks, APIs) is maturing. The methodology layer is missing.
 

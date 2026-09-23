@@ -72,7 +72,7 @@ Active v0.1. Core framework documented and published. Distribution packs shipped
 
 ### Framework critique follow-ups
 
-- ✅ Stack positioning aligned with context-stack: ContextOps as organizational context governance, ContextBoundary as egress governance, Sthala as governed runtime reference, and Griha as product layer.
+- ✅ Stack positioning aligned with context-stack COMPOSITION.md: ContextOps and ContextBoundary are the specification layer. contextboundary-gw, Sthala and Griha are reference implementations that apply it.
 - ✅ Curate stage strengthened with explicit governed Context Asset outputs: canonical source, owner, validity rule, conflict rule, consumers, shape constraint, and downstream consumers.
 - ✅ Continuous Context Operations (CCO) threaded through the Spine, AMS / Run overlay, and machine-readable manifest.
 - ✅ Level 1 foundation readiness path added to `FRAMEWORK.md`, `framework.yaml`, and `agent-instructions/README.md`.
